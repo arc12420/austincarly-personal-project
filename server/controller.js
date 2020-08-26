@@ -1,0 +1,201 @@
+const bcrypt = require("bcryptjs");
+
+module.exports = {
+  login: async (req, res) => {
+    const db = req.app.get("db");
+    const { email, password } = req.body;
+    const user = await db.getUser(email);
+    if (!user[0]) {
+      return res.status(401).send("Incorrect credentials");
+    } else {
+      const authenticated = bcrypt.compareSync(password, user[0].password);
+      if (authenticated) {
+        req.session.user = {
+          userId: user[0].id,
+          firstName: user[0].firstName,
+          lastName: user[0].lastName,
+          email: user[0].email,
+          profilePic: user[0].profilePic,
+        };
+        console.log(req.session.user);
+        res.status(200).send(req.session.user);
+      } else {
+        res.status(403).send("Username or password incorrect");
+      }
+    }
+  },
+  getAllUsers: (req, res) => {
+    const db = req.app.get("db");
+
+    db.getAllUsers()
+      .then((users) => res.status(200).send(users))
+      .catch((err) => {
+        res
+          .status(500)
+          .send({
+            errorMessage:
+              "Oops! Something went wrong. Our engineers have been informed!",
+          });
+        console.log(err);
+      });
+
+  },
+  getAllPosts: (req, res) => {
+    const db = req.app.get("db");
+
+    db.getAllPosts()
+      .then((posts) => res.status(200).send(posts))
+      .catch((err) => {
+        res
+          .status(500)
+          .send({
+            errorMessage:
+              "Oops! Something went wrong. Our engineers have been informed!",
+          });
+        console.log(err);
+      });
+  },
+//   getAllPhotos: (req, res) => {
+//     const db = req.app.get("db");
+
+//     db.getAllPhotos()
+//       .then((photos) => res.status(200).send(photos))
+//       .catch((err) => {
+//         res
+//           .status(500)
+//           .send({
+//             errorMessage:
+//               "Oops! Something went wrong. Our engineers have been informed!",
+//           });
+//         console.log(err);
+//       });
+//   },
+  getAlbums: (req, res) => {
+    const db = req.app.get("db");
+
+    db.getAlbums()
+      .then((albums) => res.status(200).send(albums))
+      .catch((err) => {
+        res
+          .status(500)
+          .send({
+            errorMessage:
+              "Oops! Something went wrong. Our engineers have been informed!",
+          });
+        console.log(err);
+      });
+  },
+  register: async (req, res) => {
+    const db = req.app.get("db");
+    const { firstName, lastName, email, password, profilePic } = req.body;
+    const existingUser = await db.getUser(email);
+    if (existingUser[0]) {
+      return res.status(409).send("User already exists");
+    }
+    const salt = bcrypt.genSaltSync(10);
+    const hash = bcrypt.hashSync(password, salt);
+    const [newUser] = await db.register([firstName, lastName, email, hash, profilePic]);
+    console.log(newUser);
+    req.session.user = {
+      userId: newUser.id,
+      firstName: newUser.firstName,
+      lastName: newUser.lastName,
+      email: newUser.email,
+      profilePic: newUser.profilePic,
+    };
+    res.status(200).send(req.session.user);
+  },
+  addPost: (req, res) => {
+    const dbInstance = req.app.get("db");
+    const { title, img, post, author } = req.body;
+    const { id } = req.params;
+
+    dbInstance
+      .addPost([title, img, post, author, id])
+      .then(() => res.sendStatus(200))
+      .catch((err) => {
+        res
+          .status(500)
+          .send({
+            errorMessage:
+              "Oops! Something went wrong. Our engineers have been informed!",
+          });
+        console.log(err);
+      });
+  },
+  addPhoto: (req, res) => {
+    const dbInstance = req.app.get("db");
+    const { title, img, author} = req.body;
+    const { album } = req.params;
+
+    dbInstance
+      .addPhoto([title, img, author, album])
+      .then(() => res.sendStatus(200))
+      .catch((err) => {
+        res
+          .status(500)
+          .send({
+            errorMessage:
+              "Oops! Something went wrong. Our engineers have been informed!",
+          });
+        console.log(err);
+      });
+  },
+  addAlbum: (req, res) => {
+    const dbInstance = req.app.get("db");
+    const { title } = req.body;
+
+    dbInstance
+      .addAlbum([title])
+      .then(() => res.sendStatus(200))
+      .catch((err) => {
+        res
+          .status(500)
+          .send({
+            errorMessage:
+              "Oops! Something went wrong. Our engineers have been informed!",
+          });
+        console.log(err);
+      });
+  },
+//   updateUser: (req, res) => {
+
+//   },
+//   updatePost: (req, res) => {
+
+//   },
+  deletePost: (req, res) => {
+    const dbInstance = req.app.get("db");
+    const { id } = req.params;
+
+    dbInstance
+      .deletePost(id)
+      .then(() => res.sendStatus(200))
+      .catch((err) => {
+        res
+          .status(500)
+          .send({
+            errorMessage:
+              "Oops! Something went wrong. Our engineers have been informed!",
+          });
+        console.log(err);
+      });
+  },
+  deletePhoto: (req, res) => {
+    const dbInstance = req.app.get("db");
+    const { id } = req.params;
+
+    dbInstance
+      .deletePhoto(id)
+      .then(() => res.sendStatus(200))
+      .catch((err) => {
+        res
+          .status(500)
+          .send({
+            errorMessage:
+              "Oops! Something went wrong. Our engineers have been informed!",
+          });
+        console.log(err);
+      });
+  },
+};

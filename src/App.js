@@ -1,15 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import Navigation from './components/Navigation/Navigation';
+import routes from './routes';
+import { withRouter } from 'react-router-dom';
 import './App.css';
 
-function App() {
+function App(props) {
+  console.log(props.location);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />        
+    <div className="app">
+      <header className="appHeader">
+        {props.location.pathname === "/" ? null : <Navigation />}
+        {routes}
       </header>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);

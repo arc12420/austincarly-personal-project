@@ -16,12 +16,16 @@ CREATE TABLE posts (
     author INTEGER REFERENCES users(id)
 );
 
-CREATE TABLE photos (
+CREATE TABLE albums (
     id SERIAL PRIMARY KEY,
-    title VARCHAR(45),
-    img TEXT,
-    author INTEGER REFERENCES users(id)
+    title VARCHAR(45)
 );
+
+create table photos (
+    id serial primary key,
+    img text,
+    album_id integer references albums(id)
+)
 
 --------------------------------------------------Dummy Data------------------------
 INSERT INTO users (firstname, lastname, email, password, profilePic)
