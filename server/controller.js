@@ -20,7 +20,7 @@ module.exports = {
         console.log(req.session.user);
         res.status(200).send(req.session.user);
       } else {
-        res.status(403).send("Username or password incorrect");
+        res.status(403).send("Email or password incorrect");
       }
     }
   },

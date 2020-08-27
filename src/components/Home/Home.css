@@ -1,0 +1,69 @@
+.homePage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.space {
+  height: 100px;
+  width: 100px;
+}
+
+.homePagePosts {
+  min-height: 200px;
+  height: auto;
+  width: 1000px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  opacity: .9;
+}
+.pullPost {
+  min-height: 200px;
+  height: auto;
+  width: 1000px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.namePicAndTitle{
+    width: 15%;
+    height: 90%;
+    background-color: grey;
+}
+
+.updateAndPost{
+    width: 75%;
+    height: 90%;
+    background-color: grey;
+}
+
+
+
+.homeAlbums {
+  min-height: 160px;
+  height: auto;
+  width: 200px;
+  background-color: #181a1b;
+  padding: 20px;
+  border-radius: 4px;
+}
+.homeAddAlbum {
+  margin-top: 10px;
+  text-decoration: underline;
+}
+.HomeAlbumList {
+  height: 100%;
+  width: 100%;
+}
