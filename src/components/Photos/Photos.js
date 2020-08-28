@@ -2,12 +2,10 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import "./Photos.css";
 
-function Photos (props) {
+function Photos(props) {
   return (
     <div className="photosComponent">
-      <main className="photosBox">
-        Photos Component       
-        </main>
+      <main className="photosBox">Photos Component</main>
     </div>
   );
 }

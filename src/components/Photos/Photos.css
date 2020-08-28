@@ -1,14 +1,17 @@
-.photosComponent{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.photosComponent {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.photosBox{
-    margin-top: 100px;
-    height:100vh;
-    width: 1200px;    
-    opacity: .9;
-    border-radius: 1%;
+
+.photosBox {
+  margin-top: 100px;
+  height: 100vh;
+  width: 1200px;
+  color: #dad7d2;
+  background-color: #181a1b;
+  opacity: 0.9;
+  border-radius: 4px;
 }

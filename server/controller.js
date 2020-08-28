@@ -12,11 +12,12 @@ module.exports = {
       if (authenticated) {
         req.session.user = {
           userId: user[0].id,
-          firstName: user[0].firstName,
-          lastName: user[0].lastName,
+          firstName: user[0].firstname,
+          lastName: user[0].lastname,
           email: user[0].email,
-          profilePic: user[0].profilePic,
+          profilePic: user[0].profilepic,
         };
+        console.log(user[0]);
         console.log(req.session.user);
         res.status(200).send(req.session.user);
       } else {
@@ -24,67 +25,64 @@ module.exports = {
       }
     }
   },
+
   getAllUsers: (req, res) => {
     const db = req.app.get("db");
 
     db.getAllUsers()
       .then((users) => res.status(200).send(users))
       .catch((err) => {
-        res
-          .status(500)
-          .send({
-            errorMessage:
-              "Oops! Something went wrong. Our engineers have been informed!",
-          });
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!",
+        });
         console.log(err);
       });
-
   },
+
   getAllPosts: (req, res) => {
     const db = req.app.get("db");
 
     db.getAllPosts()
       .then((posts) => res.status(200).send(posts))
       .catch((err) => {
-        res
-          .status(500)
-          .send({
-            errorMessage:
-              "Oops! Something went wrong. Our engineers have been informed!",
-          });
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!",
+        });
         console.log(err);
       });
   },
-//   getAllPhotos: (req, res) => {
-//     const db = req.app.get("db");
 
-//     db.getAllPhotos()
-//       .then((photos) => res.status(200).send(photos))
-//       .catch((err) => {
-//         res
-//           .status(500)
-//           .send({
-//             errorMessage:
-//               "Oops! Something went wrong. Our engineers have been informed!",
-//           });
-//         console.log(err);
-//       });
-//   },
-  getAlbums: (req, res) => {
+  getAllPhotosFromAlbum: (req, res) => {
+    const db = req.app.get("db");
+    const {id} = req.params
+
+    db.getAllPhotosFromAlbum(id)
+      .then((photos) => res.status(200).send(photos))
+      .catch((err) => {
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!",
+        });
+        console.log(err);
+      });
+  },
+
+  getAllAlbums: (req, res) => {
     const db = req.app.get("db");
 
-    db.getAlbums()
+    db.getAllAlbums()
       .then((albums) => res.status(200).send(albums))
       .catch((err) => {
-        res
-          .status(500)
-          .send({
-            errorMessage:
-              "Oops! Something went wrong. Our engineers have been informed!",
-          });
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!",
+        });
         console.log(err);
       });
   },
+
   register: async (req, res) => {
     const db = req.app.get("db");
     const { firstName, lastName, email, password, profilePic } = req.body;
@@ -94,7 +92,13 @@ module.exports = {
     }
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(password, salt);
-    const [newUser] = await db.register([firstName, lastName, email, hash, profilePic]);
+    const [newUser] = await db.register([
+      firstName,
+      lastName,
+      email,
+      hash,
+      profilePic,
+    ]);
     console.log(newUser);
     req.session.user = {
       userId: newUser.id,
@@ -105,6 +109,7 @@ module.exports = {
     };
     res.status(200).send(req.session.user);
   },
+
   addPost: (req, res) => {
     const dbInstance = req.app.get("db");
     const { title, img, post, author } = req.body;
@@ -114,33 +119,31 @@ module.exports = {
       .addPost([title, img, post, author, id])
       .then(() => res.sendStatus(200))
       .catch((err) => {
-        res
-          .status(500)
-          .send({
-            errorMessage:
-              "Oops! Something went wrong. Our engineers have been informed!",
-          });
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!",
+        });
         console.log(err);
       });
   },
+
   addPhoto: (req, res) => {
     const dbInstance = req.app.get("db");
-    const { title, img, author} = req.body;
+    const { title, img, author } = req.body;
     const { album } = req.params;
 
     dbInstance
       .addPhoto([title, img, author, album])
       .then(() => res.sendStatus(200))
       .catch((err) => {
-        res
-          .status(500)
-          .send({
-            errorMessage:
-              "Oops! Something went wrong. Our engineers have been informed!",
-          });
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!",
+        });
         console.log(err);
       });
   },
+
   addAlbum: (req, res) => {
     const dbInstance = req.app.get("db");
     const { title } = req.body;
@@ -149,6 +152,48 @@ module.exports = {
       .addAlbum([title])
       .then(() => res.sendStatus(200))
       .catch((err) => {
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!",
+        });
+        console.log(err);
+      });
+  },
+
+  // updateUser: (req, res) => {
+  //   const dbInstance = req.app.get("db");
+  //   const { params, body } = req;
+
+  //   dbInstance
+  //     .updateUser([
+  //       params.id,
+  //       body.firstName,
+  //       body.lastName,
+  //       body.email,
+  //       body.password,
+  //       body.profilePic,
+  //     ])
+  //     .then(() => res.sendStatus(200))
+  //     .catch((err) => {
+  //       res
+  //         .status(500)
+  //         .send({
+  //           errorMessage:
+  //             "Oops! Something went wrong. Our engineers have been informed!",
+  //         });
+  //       console.log(err);
+  //     });
+  // },
+
+  updatePost: (req, res) => {
+    const dbInstance = req.app.get("db");
+    const { params, body } = req;
+    const { userId }= req.session;
+
+    dbInstance
+      .updatePost([params.id, body.title, body.img, body.post, userId])
+      .then(() => res.sendStatus(200))
+      .catch((err) => {
         res
           .status(500)
           .send({
@@ -158,12 +203,7 @@ module.exports = {
         console.log(err);
       });
   },
-//   updateUser: (req, res) => {
 
-//   },
-//   updatePost: (req, res) => {
-
-//   },
   deletePost: (req, res) => {
     const dbInstance = req.app.get("db");
     const { id } = req.params;
@@ -172,15 +212,14 @@ module.exports = {
       .deletePost(id)
       .then(() => res.sendStatus(200))
       .catch((err) => {
-        res
-          .status(500)
-          .send({
-            errorMessage:
-              "Oops! Something went wrong. Our engineers have been informed!",
-          });
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!",
+        });
         console.log(err);
       });
   },
+
   deletePhoto: (req, res) => {
     const dbInstance = req.app.get("db");
     const { id } = req.params;
@@ -189,12 +228,10 @@ module.exports = {
       .deletePhoto(id)
       .then(() => res.sendStatus(200))
       .catch((err) => {
-        res
-          .status(500)
-          .send({
-            errorMessage:
-              "Oops! Something went wrong. Our engineers have been informed!",
-          });
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!",
+        });
         console.log(err);
       });
   },

@@ -13,20 +13,30 @@ class Add_Photo extends Component {
     };
   }
 
-    render() {
+  render() {
     return (
       <div className="addPhotoComponent">
-        <main className="addPhotoBox">          
-       Add Photo Component
-        <div className="inputs">
-          <input className="addPhotoTitle" placeholder="Title"/>
-          <input className="addPhotoURL" placeholder="Image URL"/>
-        </div>
-        <div className="addPhotoButtons">
-          <button onClick={() => this.props.history.push("/Photos/:AlbumName")}> Save </button>
-          <button onClick={() => this.props.history.push("/Photos/:AlbumName")}> Cancel </button>
-        </div>
-       </main>
+        <main className="addPhotoBox">
+          Add Photo Component
+          <div className="inputs">
+            <input className="addPhotoTitle" placeholder="Title" />
+            <input className="addPhotoURL" placeholder="Image URL" />
+          </div>
+          <div className="addPhotoButtons">
+            <button
+              onClick={() => this.props.history.push("/Photos/:AlbumName")}
+            >
+              {" "}
+              Save{" "}
+            </button>
+            <button
+              onClick={() => this.props.history.push("/Photos/:AlbumName")}
+            >
+              {" "}
+              Cancel{" "}
+            </button>
+          </div>
+        </main>
       </div>
     );
   }

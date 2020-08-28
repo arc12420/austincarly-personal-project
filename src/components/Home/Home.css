@@ -14,15 +14,17 @@
 .homePagePosts {
   min-height: 200px;
   height: auto;
-  width: 1000px;
+  width: 1000px;  
+  color: #DAD7D2;
+  background-color: #181a1b;
+  opacity: .9;
   border-radius: 4px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  opacity: .9;
 }
 .pullPost {
   min-height: 200px;
@@ -34,7 +36,7 @@
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .namePicAndTitle{

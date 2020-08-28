@@ -1,41 +1,47 @@
-.registrationComponent{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.registrationComponent {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.registrationBox{
-    height: 600px;
-    width: 600px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    flex-direction: column;
-    justify-content: space-evenly;
-    border-radius: 5px;
+
+.registrationBox {
+  height: 600px;
+  width: 600px;
+  color: #dad7d2;
+  background-color: #181a1b;
+  opacity: 0.9;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-.inputsAndButtons{
-    height: 60%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    justify-content: center;
-    align-items: center;
+
+.inputsAndButtons {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 }
-.registrationInputs{
-    height: 60%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+
+.registrationInputs {
+  height: 60%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-.registrationButtons{
-    height:auto;
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+
+.registrationButtons {
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }

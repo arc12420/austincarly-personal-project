@@ -1,7 +1,8 @@
-.app{
+.app {
   background-image: url(https://wallpaperboat.com/wp-content/uploads/2019/10/cool-website-background-03.jpg);
   height: 100vw;
   width: 100vw;
+  color: #dad7d2;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,19 +10,23 @@
   resize: vertical;
   /* -----------------Might make it unscrollable */
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   /* ------------------------------- */
-  display: flex;  
+  display: flex;
 }
-button{
+
+button {
   background-color: #0c0d0e;
   opacity: 1;
+  color: #dad7d2;
 }
-input{
+
+input {
   background-color: #24272a;
   opacity: 100;
 }
+
 /* .projectHeader{  
   height: 100vh;
   width: 100vw;

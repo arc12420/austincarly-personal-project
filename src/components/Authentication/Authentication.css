@@ -1,31 +1,35 @@
-.AuthenticationComponent{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    color: rgb(233, 233, 233);
+.AuthenticationComponent {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: rgb(233, 233, 233);
 }
-main{
-    height: 500px;
-    width: 500px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    flex-direction: column;
-    justify-content: space-evenly;
-    border-radius: 5px;    
-    opacity: .95;
+
+main {
+  height: 500px;
+  width: 500px;
+  color: #dad7d2;
+  background-color: #181a1b;
+  opacity: 0.9;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-.buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.logo{
-    height:150px;
-    width:150px;
-    /* background-image: image(); */
+
+.logo {
+  height: 150px;
+  width: 150px;
+  /* background-image: image(); */
 }
