@@ -9,9 +9,9 @@
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
+  /* position: fixed; */
 }
 
-.navLogo {
-  height: 100px;
-  width: 100px;
+.navLogo{
+  filter:invert(1)
 }

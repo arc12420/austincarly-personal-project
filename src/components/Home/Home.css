@@ -1,15 +1,16 @@
 .homePage {
-  height: 100vh;
+  height: auto;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  /* overflow-y: scroll; */
 }
-.space {
+/* .space {
   height: 100px;
   width: 100px;
-}
+} */
 
 .homePagePosts {
   min-height: 200px;
@@ -20,15 +21,14 @@
   opacity: .9;
   border-radius: 4px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: column-reverse;
+  margin-top: 100px;
+  margin-bottom: 200px;
   align-items: center;
-  justify-content: space-between;
   padding: 20px;
 }
 .pullPost {
   min-height: 200px;
-  height: auto;
   width: 1000px;
   border-radius: 4px;
   display: flex;
@@ -36,7 +36,7 @@
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  /* padding: 20px; */
+  padding: 20px;
 }
 
 .namePicAndTitle{
@@ -51,21 +51,31 @@
     background-color: grey;
 }
 
-
-
 .homeAlbums {
-  min-height: 160px;
+  min-height: 310px;
   height: auto;
-  width: 200px;
+  width: 150px;
   background-color: #181a1b;
   padding: 20px;
   border-radius: 4px;
+  position: fixed;
+  right:0;
+  bottom: 39.5vh;
+  opacity: .9;
 }
 .homeAddAlbum {
   margin-top: 10px;
   text-decoration: underline;
 }
 .HomeAlbumList {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: 100vw;
+}
+.allAlbumNames {
+  height: auto;
+  width: 100vw;
+}
+.albumNamesComp {
+  height: auto;
+  width: 100vw;
 }

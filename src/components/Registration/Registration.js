@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { loginUser } from "../../redux/reducer";
 import "./Registration.css";
+import logo from "../../Logo.png";
 import axios from "axios";
 
 class Registration extends Component {
@@ -44,7 +45,7 @@ class Registration extends Component {
     return (
       <div className="registrationComponent">
         <main className="registrationBox">
-          <img className="logo" alt="Logo" src="Logo" />
+        <img src={logo} className="registrationLogo" alt="Logo" />
           <h6>Registration</h6>
           <div className="inputsAndButtons">
             <div className="registrationInputs">

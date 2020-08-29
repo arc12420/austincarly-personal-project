@@ -7,6 +7,7 @@ import Home from "./components/Home/Home";
 import Photos from "./components/Photos/Photos";
 import Registration from "./components/Registration/Registration";
 import Post from "./components/Post/Post";
+import Albums from "./components/Album/Album";
 
 export default (
   <Switch>
@@ -14,8 +15,9 @@ export default (
     <Route path="/Registration" component={Registration} />
     <Route path="/Add_Photo" component={Add_Photo} />
     <Route path="/Add_Post" component={Add_Post} />
-    <Route path="/edit/:id" component={Add_Post} />
+    <Route path="/Edit/:id" component={Add_Post} />
     <Route path="/Post/:postid" component={Post} />
+    <Route path="/Albums" component={Albums} />
     <Route path="/Home" component={Home} />
     <Route path="/Photos" component={Photos} />
   </Switch>

@@ -45,3 +45,9 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+.registrationLogo{
+  margin-top: 20px;
+  margin-left: 45px;
+  filter:invert(1)
+}

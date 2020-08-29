@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Post from "../Post/Post";
+import Album from "../Album/Album";
 import "./Home.css";
 
 class Home extends Component {
@@ -23,6 +24,13 @@ class Home extends Component {
       albums: albums.data,
     });
   }
+  
+
+  dlt = (id) => {
+    axios.delete(`/api/deletePost/${id}`).then((res) => {
+      this.getData();
+    });
+  };
 
   render() {
     const arr = this.state.posts.map((element, index) => {
@@ -32,13 +40,13 @@ class Home extends Component {
         </div>
       );
     });
-    // const arr2 = this.state.albums.map((element, index) => {
-    //   return (
-    //     // <div className="allAlbumNames">
-    //     //   <Album className="albumNamesComp" albums={element} dlt={this.dlt} />
-    //     // </div>
-    //   );
-    // });
+    const arr2 = this.state.albums.map((element, index) => {
+      return (
+        <div className="allAlbumNames">
+          <Album className="albumNamesComp" albums={element} delete={this.delete} />
+        </div>
+      );
+    });
     return (
       <div className="homePage">
         <div className="space" />
@@ -47,8 +55,8 @@ class Home extends Component {
           <h5>
             Family <br /> Photo <br /> Albums{" "}
           </h5>
-          <h3 className="homeAddAlbum">Add Ablum</h3>
-          <div className="homeAlbumList">{/* {arr2} */}</div>
+          <h3 className="homeAddAlbum">Add Album</h3>
+          <div className="homeAlbumList">{arr2}</div>
         </div>
       </div>
     );

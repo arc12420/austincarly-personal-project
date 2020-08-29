@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { loginUser } from "../../redux/reducer";
 import "./Authentication.css";
-import Logo from "../../Logo.png";
+import logo from "../../Logo.png";
 import axios from "axios";
 
 class Authentication extends Component {
@@ -42,14 +42,14 @@ class Authentication extends Component {
     return (
       <div className="AuthenticationComponent">
         <main>
-          <img className="logo" alt="Logo" src="Logo" />
-          Welcome!
-          <div className="inputsAndButtons">
-            <div className="inputs">
+        <img src={logo} className="authenticationLogo" alt="Logo" />
+          <h6 className="welcome" >Welcome!</h6>
+          <div className="authenticationInputsAndButtons">
+            <div className="authenticationInputs">
               <input placeholder="Email" onChange={(event) => this.handleEmail(event.target.value)}/>
               <input placeholder="Password" onChange={(event) => this.handlePassword(event.target.value)} />
             </div>
-            <div className="buttons">
+            <div className="authenticationButtons">
               <button onClick={this.login}>
                 {" "}
                 Sign-in{" "}

@@ -112,11 +112,11 @@ module.exports = {
 
   addPost: (req, res) => {
     const dbInstance = req.app.get("db");
-    const { title, img, post, author } = req.body;
-    const { id } = req.params;
+    const { title, img, post } = req.body;
+    const { id } = req.session.user;
 
     dbInstance
-      .addPost([title, img, post, author, id])
+      .addPost([title, img, post, id])
       .then(() => res.sendStatus(200))
       .catch((err) => {
         res.status(500).send({
