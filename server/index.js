@@ -39,6 +39,7 @@ app.post("/api/addAlbum", controller.addAlbum);
 app.put("/api/updatePost/:id", controller.updatePost);
 app.delete("/api/deletePost/:id", controller.deletePost);
 app.delete("/api/deletePhoto/:id", controller.deletePhoto);
+app.delete("/api/deleteAlbum/:id", controller.deleteAlbum);
 
 app.listen(SERVER_PORT, () =>
   console.log(`You are connected to port ${SERVER_PORT}.`)

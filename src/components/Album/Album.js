@@ -6,7 +6,8 @@ function Album(props) {
   console.log(props)
   return (
     <div className="albumComponent">
-      {/* {props.Album.title} */}
+      {props.albums.title}
+      <b className="albumDelete" onClick={() => props.dltAlbum(props.albums.id)}> X </b>
     </div>
   );
 }

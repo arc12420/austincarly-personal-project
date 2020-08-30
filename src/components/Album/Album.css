@@ -1,0 +1,14 @@
+.albumComponent{
+    size:15px;
+    height: auto;
+    width:160px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.albumDelete{
+    font-weight: bold;
+}

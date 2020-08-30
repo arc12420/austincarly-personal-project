@@ -16,7 +16,7 @@ class Nav extends Component {
     console.log(this.props);
     return (
       <nav className="navigationComponent">
-        <img src={logo} className="navLogo" alt="Logo" />
+        <img src={logo} className="navLogo" alt="Logo"/>
         <div
           className="homeButton"
           onClick={() => this.props.history.push("/Home")}

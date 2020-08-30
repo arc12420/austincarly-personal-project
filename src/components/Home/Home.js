@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Post from "../Post/Post";
 import Album from "../Album/Album";
+import Add_Album from "../Add_Album/Add_Album";
 import "./Home.css";
 
 class Home extends Component {
@@ -24,10 +25,15 @@ class Home extends Component {
       albums: albums.data,
     });
   }
-  
 
   dlt = (id) => {
     axios.delete(`/api/deletePost/${id}`).then((res) => {
+      this.getData();
+    });
+  };
+
+  dltAlbum = (id) => {
+    axios.delete(`/api/deleteAlbum/${id}`).then((res) => {
       this.getData();
     });
   };
@@ -43,7 +49,11 @@ class Home extends Component {
     const arr2 = this.state.albums.map((element, index) => {
       return (
         <div className="allAlbumNames">
-          <Album className="albumNamesComp" albums={element} delete={this.delete} />
+          <Album
+            className="albumNamesComp"
+            albums={element}
+            dltAlbum={this.dltAlbum}
+          />
         </div>
       );
     });
@@ -55,7 +65,12 @@ class Home extends Component {
           <h5>
             Family <br /> Photo <br /> Albums{" "}
           </h5>
-          <h3 className="homeAddAlbum">Add Album</h3>
+          <hr />
+          <div className="dropDownBox">
+            <h3 className="homeAddAlbum">Add Album</h3>
+          </div>
+          <Add_Album className="dropContent" componentDidMount={this.componentDidMount} />
+          <hr />
           <div className="homeAlbumList">{arr2}</div>
         </div>
       </div>
