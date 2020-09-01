@@ -1,6 +1,7 @@
 .postComponent {
-  width: 100vw;
+  width: 100%;
   height: auto;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -22,6 +23,13 @@
   padding: 5px;
 }
 
+.postContent{
+  max-width: 90%;
+  overflow: visible;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
 .updateAndPost {
   width: 75vw;
   height: 90vh;
@@ -37,6 +45,7 @@
 }
 
 .postButtons{
+  width: 100px;
   margin-top: 10px;
   margin-right: 4px;
   display:flex;
@@ -44,23 +53,53 @@
   justify-content: flex-end;
 }
 
+.postTitle{
+  width: 650px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .editAndX{
   margin-left: 10px;
   margin-right: 10px;
+  cursor: pointer;  
 }
 
 .postInfo{
+  /* max-width: 90%; */
+  /* word-wrap: normal; */
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   padding:20px;
 }
 
+.titleAndButtons{
+  display: flex;
+  flex-direction: row;
+}
+
 .uploadedImage{
  max-height: 250px;
   max-width: 250px;
-  min-width:250px;
+  /* min-width:250px; */
+  min-height:250px;
   margin-right: 20px;
   opacity: 1;
   border-radius: 4px;
+  object-fit: contain;
+}
+
+.profilePic{
+  max-height: 135px;
+  max-width: 135px;
+  min-width:135px;
+  margin: 2.5px;  
   object-fit: cover;
+  display: flex;
+  flex-direction: column;
+
 }

@@ -40,7 +40,8 @@ class Add_Post extends Component {
             </div>
             <h6>Create New Post</h6>
           </div>
-          <input onChange={(event) => this.handlePost(event.target.value)} className="postInputBox" placeholder="Enter Post Here" />
+          <textarea onChange={(event) => this.handlePost(event.target.value)} 
+          className="postInputBox" placeholder="Enter Post Here" />
           <div className="addPostButtons">
             <button onClick={this.makePost}>
               Post

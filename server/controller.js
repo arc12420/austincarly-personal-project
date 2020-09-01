@@ -26,6 +26,19 @@ module.exports = {
     }
   },
 
+  logout: (req, res) => {
+    req.session.destroy();
+    res.sendStatus(200);
+  },
+
+  user: (req, res) => {
+    if (req.session.user) {
+      res.status(200).send(req.session.user);
+    } else {
+      res.sendStatus(200);
+    }
+  },
+
   getAllUsers: (req, res) => {
     const db = req.app.get("db");
 
@@ -39,6 +52,20 @@ module.exports = {
         console.log(err);
       });
   },
+
+  // getPostAuthor: (req, res) => {
+  //   const db = req.app.get("db");
+
+  //   db.getPostAuthor()
+  //     .then((firstName, lastName) => res.status(200).send(firstName, lastName))
+  //     .catch((err) => {
+  //       res.status(500).send({
+  //         errorMessage:
+  //           "Oops! Something went wrong. Our engineers have been informed!",
+  //       });
+  //       console.log(err);
+  //     });
+  // },
 
   getAllPosts: (req, res) => {
     const db = req.app.get("db");
@@ -112,11 +139,13 @@ module.exports = {
 
   addPost: (req, res) => {
     const dbInstance = req.app.get("db");
+    console.log("body",req.body)
+    console.log("session",req.session.user)
     const { title, img, post } = req.body;
-    const { id } = req.session.user;
+    const { userId } = req.session.user;
 
     dbInstance
-      .addPost([title, img, post, id])
+      .addPost([title, img, post, userId])
       .then(() => res.sendStatus(200))
       .catch((err) => {
         res.status(500).send({
@@ -150,7 +179,7 @@ module.exports = {
 
     dbInstance
       .addAlbum([title])
-      .then(() => res.sendStatus(200))
+      .then((albums) => res.status(200).send(albums))
       .catch((err) => {
         res.status(500).send({
           errorMessage:

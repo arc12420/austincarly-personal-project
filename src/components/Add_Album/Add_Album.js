@@ -13,27 +13,27 @@ class Add_Album extends Component {
     this.setState({title: value});
   }
 
-  makeAlbum = () => {
-    const{title} = this.state
-    axios.post("/api/addAlbum", {title})
-    .then((res) => {
-    //   this.props.componentDidMount();
-      this.props.history.push("/Home");
-    })
-  }
+  // makeAlbum = () => {
+  //   const{title} = this.state
+  //   axios.post("/api/addAlbum", {title})
+  //   .then((res) => {
+  //     this.props.componentDidMount();
+  //     // this.props.history.push("/Home");
+  //   })
+  // }
 
   render(props) {
     return (
       <div className="addAlbumComponent">
           <div className="titleImagePageTitle">
             <h6>Name Your Album</h6>
-               <input onChange={(event) => this.handleTitle(event.target.value)} placeholder="Title" />
+               <input onChange={(event) => this.handleTitle(event.target.value)} placeholder="Title" value={this.state.title} />
           </div>
           <div className="addAlbumButtons">
-            <button onClick={this.makeAlbum}>
+            <button onClick={() => this.props.makeAlbum(this.state.title)}>
               Add
             </button>
-            <button onClick={() => this.props.componentDidMount()}>
+            <button onClick={() => this.handleTitle("")}>
               Cancel
             </button>
           </div>

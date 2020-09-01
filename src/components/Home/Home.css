@@ -59,8 +59,8 @@
   padding: 20px;
   border-radius: 4px;
   position: fixed;
-  right:0;
-  bottom: 39.5vh;
+  right:0;  
+  top: 200px;
   opacity: .9;
 }
 .HomeAlbumList {
@@ -70,34 +70,38 @@
 .allAlbumNames {
   height: auto;
   width: 100vw;
+  cursor: pointer;  
 }
 .albumNamesComp {
   height: auto;
   width: 100vw;
 }
 
-.homeAddAlbum {
-  /* background-color: #3498DB; */
-  /* color: white; */
-  /* padding: 16px; */
-  /* font-size: 16px; */
-  /* border: none; */
-  /* cursor: pointer;   */
-  /* margin-top: 10px; */
+/* .homeAddAlbum {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;  
+   margin-top: 10px;
+} */
+
+ /* .dropDownBox{
+  cursor: pointer;  
+}  */
+
+.homeAddAlbum{
+  cursor: pointer;  
 }
 
-/* .dropDownBox{
-  position: relative;
-  display: inline-block;
-}
-
-.dropContent{
+/* .dropContent{
   display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-} */
+}  */
 
 

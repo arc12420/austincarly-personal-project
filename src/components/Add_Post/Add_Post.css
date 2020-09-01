@@ -20,9 +20,23 @@
   padding: 20px;
 }
 
+.postInputContainer{
+  height:auto;
+  width: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
 .postInputBox {
   height: 70%;
   width: 80%;
+  background-color: #24272a;
+  opacity: 100;  
+  color: #dad7d2;  
+  font-size: 20px;
 }
 
 .addPostButtons {

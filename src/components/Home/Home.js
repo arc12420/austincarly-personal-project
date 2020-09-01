@@ -26,6 +26,15 @@ class Home extends Component {
     });
   }
 
+  makeAlbum = (title) => {
+      axios.post("/api/addAlbum", {title})
+      .then((res) => {
+        this.setState({
+          albums: res.data
+        })
+      })
+    }
+
   dlt = (id) => {
     axios.delete(`/api/deletePost/${id}`).then((res) => {
       this.getData();
@@ -39,6 +48,7 @@ class Home extends Component {
   };
 
   render() {
+    // console.log(this.state.posts)
     const arr = this.state.posts.map((element, index) => {
       return (
         <div className="pullPost">
@@ -69,7 +79,7 @@ class Home extends Component {
           <div className="dropDownBox">
             <h3 className="homeAddAlbum">Add Album</h3>
           </div>
-          <Add_Album className="dropContent" componentDidMount={this.componentDidMount} />
+          <Add_Album className="dropContent" makeAlbum={this.makeAlbum} />
           <hr />
           <div className="homeAlbumList">{arr2}</div>
         </div>
