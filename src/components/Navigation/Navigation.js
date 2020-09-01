@@ -35,7 +35,10 @@ class Nav extends Component {
           {" "}
           Home{" "}
         </div>
-        {/* {props.location.pathname === "/Photos" ?( null ) : (<div className="addPhotoButton" onClick={() => this.props.history.push("/Add_Photo")}> Add Photo </div>)} */}
+        <div className='navigationAddPhotoButton'>
+        {this.props.location.pathname === "/photos/:albumid" ? "ADZ PHOTO" : null}
+          Add Photo
+        </div>
         <div
           className="addPost"
           onClick={() => this.props.history.push("/Add_Post")}

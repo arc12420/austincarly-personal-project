@@ -30,7 +30,9 @@ class Add_Album extends Component {
                <input onChange={(event) => this.handleTitle(event.target.value)} placeholder="Title" value={this.state.title} />
           </div>
           <div className="addAlbumButtons">
-            <button onClick={() => this.props.makeAlbum(this.state.title)}>
+            <button onClick={() => this.props.makeAlbum(this.state.title)} 
+            // onClick={() => this.handleTitle("")}
+            >
               Add
             </button>
             <button onClick={() => this.handleTitle("")}>

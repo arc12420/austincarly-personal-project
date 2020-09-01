@@ -19,6 +19,6 @@ export default (
     <Route path="/Post/:postid" component={Post} />
     <Route path="/Albums" component={Albums} />
     <Route path="/Home" component={Home} />
-    <Route path="/Photos" component={Photos} />
+    <Route path="/photos/:albumid" component={Photos} />
   </Switch>
 );

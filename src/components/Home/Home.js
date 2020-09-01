@@ -31,7 +31,7 @@ class Home extends Component {
       .then((res) => {
         this.setState({
           albums: res.data
-        })
+        });
       })
     }
 
@@ -46,6 +46,10 @@ class Home extends Component {
       this.getData();
     });
   };
+
+  getAlbum = (id) => {
+      this.props.history.push(`/photos/${id}`)    
+  }
 
   render() {
     // console.log(this.state.posts)
@@ -63,6 +67,7 @@ class Home extends Component {
             className="albumNamesComp"
             albums={element}
             dltAlbum={this.dltAlbum}
+            getAlbum={this.getAlbum}
           />
         </div>
       );

@@ -30,7 +30,6 @@ class App extends Component {
         <div className="app">
           <header className="projectHeader">
             {this.props.location.pathname === "/" ? null : this.props.location.pathname === "/Registration" ? null : (<Navigation />)}
-            {/* {props.location.pathname === "/" ? null : props.location.pathname === "/Registration" ? null : (<Album_Sidebar />)} */}
             {routes}
           </header>
         </div>
