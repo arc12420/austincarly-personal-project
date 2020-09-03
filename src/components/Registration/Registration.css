@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
-.registrationPageTitle{
+.registrationPageTitle {
   font-size: 30px;
 }
 
@@ -49,8 +49,8 @@
   justify-content: space-evenly;
 }
 
-.registrationLogo{
+.registrationLogo {
   margin-top: 20px;
   margin-left: 45px;
-  filter:invert(1)
+  filter: invert(1);
 }

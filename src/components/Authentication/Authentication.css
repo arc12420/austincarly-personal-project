@@ -22,7 +22,7 @@ main {
   justify-content: space-evenly;
 }
 
-.authenticationInputsAndButtons{
+.authenticationInputsAndButtons {
   height: 60%;
   width: 100%;
   display: flex;
@@ -39,8 +39,8 @@ main {
   align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
-  justify-content: space-around; 
-  padding-bottom: 30px; 
+  justify-content: space-around;
+  padding-bottom: 30px;
   margin-top: -20px;
 }
 
@@ -58,13 +58,13 @@ main {
   align-items: center;
 } */
 
-.authenticationLogo{
+.authenticationLogo {
   margin-top: 20px;
   margin-left: 45px;
-  filter:invert(1)
+  filter: invert(1);
 }
 
-.welcome{
+.welcome {
   padding-top: 20px;
   font-size: 30px;
 }

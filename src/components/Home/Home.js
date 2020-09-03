@@ -31,7 +31,7 @@ class Home extends Component {
       this.setState({
         albums: res.data,
       });
-    })
+    });
     // () => {this.togglePopup};
   };
 
@@ -52,9 +52,9 @@ class Home extends Component {
   };
 
   togglePopup = () => {
-    document.getElementById("popup-1").classList.toggle("active")
+    document.getElementById("popup-1").classList.toggle("active");
     console.log(this.togglePopup);
-  }
+  };
 
   render() {
     // console.log(this.state.posts)
@@ -87,9 +87,15 @@ class Home extends Component {
           </h5>
           <hr />
           <div className="dropDownBox">
-            <h3 onClick={this.togglePopup} className="homeAddAlbum">Add Album</h3>
+            <h3 onClick={this.togglePopup} className="homeAddAlbum">
+              Add Album
+            </h3>
           </div>
-          <Add_Album togglePopup={this.togglePopup} className="dropContent" makeAlbum={this.makeAlbum} />
+          <Add_Album
+            togglePopup={this.togglePopup}
+            className="dropContent"
+            makeAlbum={this.makeAlbum}
+          />
           <hr />
           <div className="homeAlbumList">{arr2}</div>
         </div>

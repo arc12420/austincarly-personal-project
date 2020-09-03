@@ -15,10 +15,10 @@
 .homePagePosts {
   min-height: 200px;
   height: auto;
-  width: 1000px;  
-  color: #DAD7D2;
+  width: 1000px;
+  color: #dad7d2;
   background-color: #181a1b;
-  opacity: .9;
+  opacity: 0.9;
   border-radius: 4px;
   display: flex;
   flex-direction: column-reverse;
@@ -39,16 +39,16 @@
   padding: 20px;
 }
 
-.namePicAndTitle{
-    width: 15%;
-    height: 90%;
-    background-color: grey;
+.namePicAndTitle {
+  width: 15%;
+  height: 90%;
+  background-color: grey;
 }
 
-.updateAndPost{
-    width: 75%;
-    height: 90%;
-    background-color: grey;
+.updateAndPost {
+  width: 75%;
+  height: 90%;
+  background-color: grey;
 }
 
 .homeAlbums {
@@ -58,20 +58,23 @@
   background-color: #181a1b;
   padding: 20px;
   border-radius: 4px;
-  opacity: .9;
+  opacity: 0.9;
   position: fixed;
-  right:0;  
+  right: 0;
   top: 200px;
 }
+
 .HomeAlbumList {
   height: auto;
   width: 100vw;
 }
+
 .allAlbumNames {
   height: auto;
   width: 100vw;
-  cursor: pointer;  
+  cursor: pointer;
 }
+
 .albumNamesComp {
   height: auto;
   width: 100vw;
@@ -87,12 +90,12 @@
    margin-top: 10px;
 } */
 
- /* .dropDownBox{
+/* .dropDownBox{
   cursor: pointer;  
 }  */
 
-.homeAddAlbum{
-  cursor: pointer;  
+.homeAddAlbum {
+  cursor: pointer;
 }
 
 /* .dropContent{
@@ -103,5 +106,3 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }  */
-
-

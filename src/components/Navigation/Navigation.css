@@ -12,38 +12,38 @@
   /* position: fixed; */
 }
 
-.navLogo{
-  filter:invert(1)
+.navLogo {
+  filter: invert(1);
 }
 
-.homeButton{  
-  cursor: pointer; 
-  font-size: 25px; 
-}
-
-.navigationAddPhotoButton{  
-  cursor: pointer; 
-  font-size: 25px; 
-}
-
-.addPost{  
-  cursor: pointer;  
+.homeButton {
+  cursor: pointer;
   font-size: 25px;
 }
-.editProfileButton{  
-  cursor: pointer;  
-}
-.signOutButton{  
-  cursor: pointer;  
+
+.navigationAddPhotoButton {
+  cursor: pointer;
+  font-size: 25px;
 }
 
-.profileBox{
+.addPost {
+  cursor: pointer;
+  font-size: 25px;
+}
+.editProfileButton {
+  cursor: pointer;
+}
+.signOutButton {
+  cursor: pointer;
+}
+
+.profileBox {
   max-height: 100px;
   display: flex;
   flex-direction: row;
 }
 
-.profilePicBox{
+.profilePicBox {
   height: 100px;
   width: 100px;
   /* overflow: hidden; */
@@ -54,34 +54,31 @@
   margin-left: 10px;
 }
 
-.navProfilePic{
-  height:80px;
+.navProfilePic {
+  height: 80px;
   width: 80px;
   /* min-width: 70px; */
-  border-radius: 4px;  
+  border-radius: 4px;
   object-fit: cover;
 }
 
-.welcomeAndEdit{
-  margin:5px;
+.welcomeAndEdit {
+  margin: 5px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-direction: column;
-  
 }
 
-.navWelcome{
-  margin:5px;
+.navWelcome {
+  margin: 5px;
 }
 
-.editProfileButton{
-  margin:5px;
+.editProfileButton {
+  margin: 5px;
 }
 
-.navSignout{
-  margin:5px;
+.navSignout {
+  margin: 5px;
   display: flex;
 }
-
-

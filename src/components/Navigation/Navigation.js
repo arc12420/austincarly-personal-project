@@ -24,11 +24,10 @@ class Nav extends Component {
   };
 
   parser = (string) => {
-    let newString = string.split('/')
-    console.log(newString)
-    return newString[2]
-  }
- 
+    let newString = string.split("/");
+    console.log(newString);
+    return newString[2];
+  };
 
   render() {
     console.log(this.props);
@@ -42,9 +41,18 @@ class Nav extends Component {
           {" "}
           Home{" "}
         </div>
-        <div className='navigationAddPhotoButton'     >
-        {this.props.location.pathname.includes("photos") ? <h3 onClick={() => this.props.history.push(`/Add_Photo/${this.parser(this.props.location.pathname)}`)}>Add Photo</h3> : null}
-          
+        <div className="navigationAddPhotoButton">
+          {this.props.location.pathname.includes("photos") ? (
+            <h3
+              onClick={() =>
+                this.props.history.push(
+                  `/Add_Photo/${this.parser(this.props.location.pathname)}`
+                )
+              }
+            >
+              Add Photo
+            </h3>
+          ) : null}
         </div>
         <div
           className="addPost"
@@ -55,9 +63,13 @@ class Nav extends Component {
         </div>
         <div className="profileBox">
           <div className="welcomeAndEdit">
-            <p className="navWelcome" >Welcome, {this.props.user.firstName}!</p>
+            <p className="navWelcome">Welcome, {this.props.user.firstName}!</p>
             <p className="editProfileButton">Edit Profile</p>
-            <p className="navSignout" onClick={this.logout} className="signOutButton">
+            <p
+              className="navSignout"
+              onClick={this.logout}
+              className="signOutButton"
+            >
               Sign-out
             </p>
           </div>

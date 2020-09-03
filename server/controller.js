@@ -83,7 +83,7 @@ module.exports = {
 
   getAllPhotosFromAlbum: (req, res) => {
     const db = req.app.get("db");
-    const {id} = req.params
+    const { id } = req.params;
 
     db.getAllPhotosFromAlbum(id)
       .then((photos) => res.status(200).send(photos))
@@ -139,8 +139,8 @@ module.exports = {
 
   addPost: (req, res) => {
     const dbInstance = req.app.get("db");
-    console.log("body",req.body)
-    console.log("session",req.session.user)
+    console.log("body", req.body);
+    console.log("session", req.session.user);
     const { title, img, post } = req.body;
     const { userId } = req.session.user;
 
@@ -161,13 +161,13 @@ module.exports = {
     const { title, img } = req.body;
     const { album } = req.params;
     const { userId } = req.session.user;
-    console.log(album)
-    console.log(userId)
+    console.log(album);
+    console.log(userId);
 
     dbInstance
-    .addPhoto([title, img, userId, album])
-    .then(() => res.sendStatus(200))
-    .catch((err) => {
+      .addPhoto([title, img, userId, album])
+      .then(() => res.sendStatus(200))
+      .catch((err) => {
         res.status(500).send({
           errorMessage:
             "Oops! Something went wrong. Our engineers have been informed!",
@@ -220,18 +220,16 @@ module.exports = {
   updatePost: (req, res) => {
     const dbInstance = req.app.get("db");
     const { params, body } = req;
-    const { userId }= req.session;
+    const { userId } = req.session;
 
     dbInstance
       .updatePost([params.id, body.title, body.img, body.post, userId])
       .then(() => res.sendStatus(200))
       .catch((err) => {
-        res
-          .status(500)
-          .send({
-            errorMessage:
-              "Oops! Something went wrong. Our engineers have been informed!",
-          });
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!",
+        });
         console.log(err);
       });
   },
@@ -267,7 +265,7 @@ module.exports = {
         console.log(err);
       });
   },
-  
+
   deleteAlbum: (req, res) => {
     const dbInstance = req.app.get("db");
     const { id } = req.params;
@@ -282,5 +280,5 @@ module.exports = {
         });
         console.log(err);
       });
-  }
+  },
 };

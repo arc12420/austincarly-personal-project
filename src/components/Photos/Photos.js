@@ -35,7 +35,12 @@ class Photos extends Component {
         <div className="pullPhotos" key="element.title">
           <div className="titleAndX">
             <p className="albumImageTitle">{element.title}</p>
-            <h5 className='photoDeleteButton' onClick={() => this.deletePhoto(element.id)} >X</h5>
+            <h5
+              className="photoDeleteButton"
+              onClick={() => this.deletePhoto(element.id)}
+            >
+              X
+            </h5>
           </div>
           <div className="albumImageBox">
             <img className="albumImage" src={element.img} />

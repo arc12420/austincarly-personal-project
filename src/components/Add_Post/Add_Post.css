@@ -21,8 +21,8 @@
   padding: 40px;
 }
 
-.postInputContainer{
-  height:auto;
+.postInputContainer {
+  height: auto;
   width: auto;
   display: flex;
   align-items: flex-start;
@@ -35,8 +35,8 @@
   height: 450%;
   width: 80%;
   background-color: #24272a;
-  opacity: 100;  
-  color: #dad7d2;  
+  opacity: 100;
+  color: #dad7d2;
   font-size: 20px;
 }
 
@@ -50,24 +50,24 @@
 
 .titleImagePageTitles {
   width: 80%;
-  height:45%;
+  height: 45%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   justify-content: space-between;
 }
 
-.addPostPageTitleBox{
-  height:80px;
-  width:63%;
-  display:flex;
+.addPostPageTitleBox {
+  height: 80px;
+  width: 63%;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.addPostPageTitle{
-  height:50px;
-  width:300px;
+.addPostPageTitle {
+  height: 50px;
+  width: 300px;
   font-size: 40px;
 }
 
