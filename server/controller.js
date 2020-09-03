@@ -96,6 +96,21 @@ module.exports = {
       });
   },
 
+  getPost: (req, res) => {
+    const db = req.app.get("db");
+    const { id } = req.params;
+
+    db.getPost(id)
+      .then((posts) => res.status(200).send(posts[0]))
+      .catch((err) => {
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!",
+        });
+        console.log(err);
+      });
+  },
+
   getAllAlbums: (req, res) => {
     const db = req.app.get("db");
 
@@ -220,7 +235,7 @@ module.exports = {
   updatePost: (req, res) => {
     const dbInstance = req.app.get("db");
     const { params, body } = req;
-    const { userId } = req.session;
+    const { userId } = req.session.user;
 
     dbInstance
       .updatePost([params.id, body.title, body.img, body.post, userId])

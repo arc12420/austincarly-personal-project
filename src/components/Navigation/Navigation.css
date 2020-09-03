@@ -5,6 +5,9 @@
   background-color: #181a1b;
   opacity: 0.9;
   border-radius: 4px;
+  -webkit-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+  -moz-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+  box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
   display: flex;
   justify-content: center;
   align-items: center;

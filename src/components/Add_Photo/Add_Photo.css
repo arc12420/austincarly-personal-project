@@ -17,7 +17,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-around;  
+  -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+
 }
 
 .addPhotoBoxTitle {

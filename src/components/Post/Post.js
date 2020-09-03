@@ -3,8 +3,8 @@ import { withRouter } from "react-router-dom";
 import "./Post.css";
 
 function Post(props) {
-  // console.log(props);
-
+  // console.log(props.posts.id);
+  // console.log(props.history);
   return (
     <div className="postComponent">
       <div className="namePicAndTitle">
@@ -23,7 +23,7 @@ function Post(props) {
         <div className="titleAndButtons">
           <div className="postTitle">{props.posts.title}</div>
           <div className="postButtons">
-            <h5 className="editAndX"> EDIT </h5>
+            <h5 className="editAndX" onClick={() => props.history.push(`/Edit/${props.posts.id}`)} > EDIT </h5>
             <h5 onClick={() => props.dlt(props.posts.id)} className="editAndX">
               {" "}
               X{" "}

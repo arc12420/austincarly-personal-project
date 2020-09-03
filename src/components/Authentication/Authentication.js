@@ -51,6 +51,8 @@ class Authentication extends Component {
               />
               <input
                 placeholder="Password"
+                className="passwordInput"
+                type="password"
                 onChange={(event) => this.handlePassword(event.target.value)}
               />
             </div>

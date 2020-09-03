@@ -75,6 +75,7 @@ class Registration extends Component {
               <input
                 onChange={(event) => this.handlePassword(event.target.value)}
                 placeholder="Password"
+                type="password"
               />
               <input
                 onChange={(event) => this.handleProfilePic(event.target.value)}

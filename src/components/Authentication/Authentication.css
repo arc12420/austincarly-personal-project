@@ -20,6 +20,9 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
+  -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
 }
 
 .authenticationInputsAndButtons {
@@ -67,4 +70,8 @@ main {
 .welcome {
   padding-top: 20px;
   font-size: 30px;
+}
+
+.passwordInput{
+  
 }

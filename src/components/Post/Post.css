@@ -17,6 +17,9 @@
   opacity: 1;
   border-radius: 4px;
   color: black;
+  -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
 }
 
 .picAndTitle {
@@ -40,6 +43,9 @@
   background-color: #181a1b;
   opacity: 1;
   border-radius: 4px;
+  -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
   color: black;
   /* font-size: 20px; */
 }

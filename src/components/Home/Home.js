@@ -73,10 +73,11 @@ class Home extends Component {
             albums={element}
             dltAlbum={this.dltAlbum}
             getAlbum={this.getAlbum}
-          />
+            />
         </div>
       );
     });
+    console.log(this.arr)
     return (
       <div className="homePage">
         <div className="space" />

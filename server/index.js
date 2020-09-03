@@ -28,6 +28,7 @@ massive({
 
 app.get("/api/users", controller.getAllUsers);
 app.get("/api/posts", controller.getAllPosts);
+app.get("/api/getPost/:id", controller.getPost);
 app.get("/api/photos/:id", controller.getAllPhotosFromAlbum);
 app.get("/api/albums", controller.getAllAlbums);
 // app.get("/api/postAuthor/:id", controller.getPostAuthor);

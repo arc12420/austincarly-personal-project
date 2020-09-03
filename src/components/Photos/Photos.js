@@ -51,7 +51,10 @@ class Photos extends Component {
     console.log(this.state.photos);
     return (
       <div className="albumPhotosComponent">
-        <main className="albumPhotosInfo">{mappedPhotos}</main>
+        <main className="albumPhotosInfo">
+          <h6 className="photoAlbumTitlePage">YOUR TITLE HERE</h6>
+          <div className="photoWrapper">{mappedPhotos}</div>
+        </main>
       </div>
     );
   }
