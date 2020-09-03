@@ -13,6 +13,7 @@ class Photos extends Component {
 
   componentDidMount() {
     this.getData();
+    console.log(this.props.match)
   }
   async getData() {
     const photos = await axios.get(
