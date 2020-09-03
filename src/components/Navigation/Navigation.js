@@ -23,6 +23,13 @@ class Nav extends Component {
       .catch((err) => console.log(err));
   };
 
+  parser = (string) => {
+    let newString = string.split('/')
+    console.log(newString)
+    return newString[2]
+  }
+ 
+
   render() {
     console.log(this.props);
     return (
@@ -35,9 +42,9 @@ class Nav extends Component {
           {" "}
           Home{" "}
         </div>
-        <div className='navigationAddPhotoButton'>
-        {this.props.location.pathname === "/photos/:albumid" ? "ADZ PHOTO" : null}
-          Add Photo
+        <div className='navigationAddPhotoButton'     >
+        {this.props.location.pathname.includes("photos") ? <h3 onClick={() => this.props.history.push(`/Add_Photo/${this.parser(this.props.location.pathname)}`)}>Add Photo</h3> : null}
+          
         </div>
         <div
           className="addPost"

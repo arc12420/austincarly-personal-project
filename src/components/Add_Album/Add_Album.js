@@ -6,43 +6,48 @@ class Add_Album extends Component {
   constructor() {
     super();
     this.state = {
-      title: ""
+      title: "",
     };
   }
-  handleTitle = (value) => {
-    this.setState({title: value});
-  }
 
-  // makeAlbum = () => {
-  //   const{title} = this.state
-  //   axios.post("/api/addAlbum", {title})
-  //   .then((res) => {
-  //     this.props.componentDidMount();
-  //     // this.props.history.push("/Home");
-  //   })
-  // }
+  handleTitle = (value) => {
+    this.setState({ title: value });
+  };
 
   render(props) {
     return (
-      <div className="addAlbumComponent">
-          <div className="titleImagePageTitle">
-            <h6>Name Your Album</h6>
-               <input onChange={(event) => this.handleTitle(event.target.value)} placeholder="Title" value={this.state.title} />
+      <div className="popup" id="popup-1">
+        <div class="overlay">
+          <div className="resetStyling">
+          <div className="content">
+            <div className="titleImagePageTitle">
+              <h6>Name Your Album</h6>
+              <input
+                onChange={(event) => this.handleTitle(event.target.value)}
+                placeholder="Title"
+                className="addAlbumInput"
+                value={this.state.title}
+              />
+            </div>
+            <div className="addAlbumButtons">
+              <button
+                className="popUpBtnz"
+                onClick={() => {this.props.makeAlbum(this.state.title); this.props.togglePopup();}}>
+                Add
+              </button>
+              <button
+                className="popUpBtnz"
+                onClick={() => {this.handleTitle(""); this.props.togglePopup();}}            
+              >
+                Cancel
+              </button>
+            </div>
           </div>
-          <div className="addAlbumButtons">
-            <button onClick={() => this.props.makeAlbum(this.state.title)} 
-            // onClick={() => this.handleTitle("")}
-            >
-              Add
-            </button>
-            <button onClick={() => this.handleTitle("")}>
-              Cancel
-            </button>
-          </div>
+        </div>
+        </div>
       </div>
     );
   }
 }
-
 
 export default Add_Album;

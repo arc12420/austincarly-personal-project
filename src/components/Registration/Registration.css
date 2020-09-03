@@ -19,6 +19,9 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
+.registrationPageTitle{
+  font-size: 30px;
+}
 
 .inputsAndButtons {
   height: 60%;

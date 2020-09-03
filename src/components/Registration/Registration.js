@@ -50,7 +50,7 @@ class Registration extends Component {
       <div className="registrationComponent">
         <main className="registrationBox">
         <img src={logo} className="registrationLogo" alt="Logo" />
-          <h6>Registration</h6>
+          <h6 className="registrationPageTitle" >Registration</h6>
           <div className="inputsAndButtons">
             <div className="registrationInputs">
               <input onChange={(event) => this.handleFirstName(event.target.value)} placeholder="First Name" />

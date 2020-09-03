@@ -23,13 +23,22 @@ class Photos extends Component {
     });
   }
 
+  deletePhoto = (id) => {
+    axios.delete(`/api/deletePhoto/${id}`).then((res) => {
+      this.getData();
+    });
+  };
+
   render() {
     const mappedPhotos = this.state.photos.map((element, index) => {
       return (
         <div className="pullPhotos" key="element.title">
+          <div className="titleAndX">
             <p className="albumImageTitle">{element.title}</p>
-            <div className="albumImageBox">
-              <img className="albumImage" src={element.img} />
+            <h5 className='photoDeleteButton' onClick={() => this.deletePhoto(element.id)} >X</h5>
+          </div>
+          <div className="albumImageBox">
+            <img className="albumImage" src={element.img} />
           </div>
         </div>
       );
@@ -37,9 +46,7 @@ class Photos extends Component {
     console.log(this.state.photos);
     return (
       <div className="albumPhotosComponent">
-        <main className="albumPhotosInfo">
-        {mappedPhotos}          
-        </main>
+        <main className="albumPhotosInfo">{mappedPhotos}</main>
       </div>
     );
   }

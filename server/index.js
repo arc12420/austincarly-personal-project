@@ -36,7 +36,7 @@ app.get("/api/logout", controller.logout);
 app.get("/api/verify", controller.user);
 app.post("/api/addUser", controller.register);
 app.post("/api/addPost", controller.addPost);
-app.post("/api/addPhoto", controller.addPhoto);
+app.post("/api/addPhoto/:album", controller.addPhoto);
 app.post("/api/addAlbum", controller.addAlbum);
 // app.put("/api/updateUser/:id", controller.updateUser);
 app.put("/api/updatePost/:id", controller.updatePost);

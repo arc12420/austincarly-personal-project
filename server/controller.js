@@ -158,13 +158,16 @@ module.exports = {
 
   addPhoto: (req, res) => {
     const dbInstance = req.app.get("db");
-    const { title, img, author } = req.body;
+    const { title, img } = req.body;
     const { album } = req.params;
+    const { userId } = req.session.user;
+    console.log(album)
+    console.log(userId)
 
     dbInstance
-      .addPhoto([title, img, author, album])
-      .then(() => res.sendStatus(200))
-      .catch((err) => {
+    .addPhoto([title, img, userId, album])
+    .then(() => res.sendStatus(200))
+    .catch((err) => {
         res.status(500).send({
           errorMessage:
             "Oops! Something went wrong. Our engineers have been informed!",

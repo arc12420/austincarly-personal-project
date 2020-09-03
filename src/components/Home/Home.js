@@ -27,13 +27,13 @@ class Home extends Component {
   }
 
   makeAlbum = (title) => {
-      axios.post("/api/addAlbum", {title})
-      .then((res) => {
-        this.setState({
-          albums: res.data
-        });
-      })
-    }
+    axios.post("/api/addAlbum", { title }).then((res) => {
+      this.setState({
+        albums: res.data,
+      });
+    })
+    // () => {this.togglePopup};
+  };
 
   dlt = (id) => {
     axios.delete(`/api/deletePost/${id}`).then((res) => {
@@ -48,7 +48,12 @@ class Home extends Component {
   };
 
   getAlbum = (id) => {
-      this.props.history.push(`/photos/${id}`)    
+    this.props.history.push(`/photos/${id}`);
+  };
+
+  togglePopup = () => {
+    document.getElementById("popup-1").classList.toggle("active")
+    console.log(this.togglePopup);
   }
 
   render() {
@@ -82,9 +87,9 @@ class Home extends Component {
           </h5>
           <hr />
           <div className="dropDownBox">
-            <h3 className="homeAddAlbum">Add Album</h3>
+            <h3 onClick={this.togglePopup} className="homeAddAlbum">Add Album</h3>
           </div>
-          <Add_Album className="dropContent" makeAlbum={this.makeAlbum} />
+          <Add_Album togglePopup={this.togglePopup} className="dropContent" makeAlbum={this.makeAlbum} />
           <hr />
           <div className="homeAlbumList">{arr2}</div>
         </div>

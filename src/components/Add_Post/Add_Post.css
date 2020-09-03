@@ -3,13 +3,14 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 60px;
 }
 
 .addPostBox {
-  margin-bottom: 80px;
-  height: 650px;
-  width: 1200px;
+  margin-bottom: 0px;
+  height: 65%;
+  width: 75%;
   opacity: 0.9;
   border-radius: 1%;
   display: flex;
@@ -17,7 +18,7 @@
   justify-content: center;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
 }
 
 .postInputContainer{
@@ -31,7 +32,7 @@
 }
 
 .postInputBox {
-  height: 70%;
+  height: 450%;
   width: 80%;
   background-color: #24272a;
   opacity: 100;  
@@ -44,21 +45,40 @@
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
+  margin-top: 20px;
 }
 
-.titleImagePageTitle {
-  width: 100%;
-  height: 10%;
+.titleImagePageTitles {
+  width: 80%;
+  height:45%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.addPostPageTitleBox{
+  height:80px;
+  width:63%;
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.addPostPageTitle{
+  height:50px;
+  width:300px;
+  font-size: 40px;
 }
 
 .addPostInputs {
-  height: 100%;
+  height: 266px;
   width: 200px;
   display: flex;
   flex-direction: column;
   margin-left: 50px;
   margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   justify-content: space-evenly;
 }

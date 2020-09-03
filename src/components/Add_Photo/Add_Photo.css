@@ -20,6 +20,11 @@
   justify-content: space-around;
 }
 
+.addPhotoBoxTitle{
+  font-size: 30px;
+  margin-top: 20px;
+}
+
 .inputs {
   height: 150px;
   width: 500px;
