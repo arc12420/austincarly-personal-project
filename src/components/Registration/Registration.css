@@ -7,8 +7,8 @@
 }
 
 .registrationBox {
-  height: 600px;
-  width: 600px;
+  height: 60vh;
+  width: 35vw;
   color: #dad7d2;
   background-color: #181a1b;
   opacity: 0.9;
@@ -42,6 +42,7 @@
 }
 
 .registrationButtons {
+  margin-top: 20px;
   height: auto;
   width: 50%;
   display: flex;
@@ -51,6 +52,81 @@
 
 .registrationLogo {
   margin-top: 20px;
-  margin-left: 45px;
   filter: invert(1);
 }
+
+@media (max-width: 1025px) {
+  .registrationBox{
+    width: 65vw;
+    height: 55vh;
+    margin-bottom: 40px;
+  }
+
+  .regInputs{
+    padding:10px 8px;
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  .registrationInputs{
+    display: flex;
+    justify-content: space-between;
+    height: 70%;
+  }
+
+  .regButtons{
+    padding:12px;
+    font-size: 23px;
+
+  }
+
+  .registrationPageTitle{
+    font-size: 42px;
+  }
+
+  .registrationLogo{
+    height: 17%;
+  }
+}
+
+@media (max-width: 500px) {
+  .registrationBox{
+    width: 100vw;
+    height: 80vh;
+    margin-bottom: 40px;
+  }
+
+  .regInputs{
+    padding:10px 8px;
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  .registrationInputs{
+    display: flex;
+    justify-content: space-between;
+    height: 70%;
+  }
+
+  .registrationButtons{
+    width:100%;
+    margin-top: 35px;
+  }
+
+  .regButtons{
+    padding:8px;
+    font-size: 20px;
+
+  }
+
+  .registrationPageTitle{
+    font-size: 42px;
+  }
+
+  .registrationLogo{
+    height: 14%;
+  }
+}
+
+
+

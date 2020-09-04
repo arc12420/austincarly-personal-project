@@ -17,6 +17,7 @@
 
 .navLogo {
   filter: invert(1);
+  margin-left: 20px;
 }
 
 .homeButton {
@@ -84,4 +85,23 @@
 .navSignout {
   margin: 5px;
   display: flex;
+}
+
+@media (max-width:1025px) {
+  .homeButton {
+    display: none;
+  }
+  
+  .navigationAddPhotoButton {
+    display: none;
+  }
+  
+  .addPost {
+    display: none;
+  }
+
+}
+
+@media (max-width:500px) {
+
 }

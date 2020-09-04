@@ -108,3 +108,142 @@
   display: flex;
   flex-direction: column;
 }
+
+.profileInfoTwo{
+  display: none;
+}
+
+
+@media (max-width:1025px) {
+  .namePicAndTitle{
+    -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+    -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+    box-shadow: -0px 14px 11px 1px rgba(0,0,0,0.79);
+    margin:0px;
+    margin-right: 10px;
+
+  }
+
+  .updateAndPost{    
+    -webkit-box-shadow: 0px 14px 0px 1px rgba(0,0,0,0.79);
+    -moz-box-shadow: 0px 14px 0px 1px rgba(0,0,0,0.79);
+    box-shadow: 0px 14px 0px 1px rgba(0,0,0,0.79);
+    margin: 0px;
+
+  }
+  .postInfo{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .uploadedImage{
+    width:90%;
+    max-width: unset;
+    max-height: unset;
+    min-height: unset;
+    min-width: 90%;
+  }
+  
+  .postContent{
+    width:90%;
+    font-size: 38px;
+  }
+  .profilePic{
+    width:95%;
+    max-width: unset;
+    max-height: unset;
+    min-height: unset;
+  }
+  .postTitle{
+    font-size: 40px;
+  }
+
+  .picAndTitle{
+    font-size: 40px;
+  }
+  
+  .postButtons{
+    font-size: 30px;
+  }
+
+  .profileInfoTwo{
+    display: none;
+  }
+
+}
+
+@media (max-width:500px) {
+  .namePicAndTitle{
+    -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+    -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+    box-shadow: -0px 14px 11px 1px rgba(0,0,0,0.79);
+    margin:0px;
+    margin-right: 10px;
+
+  }
+  
+  
+
+  .postComponent{
+    width: 100vw;
+  }
+
+  .updateAndPost{    
+    -webkit-box-shadow: 0px 14px 0px 1px rgba(0,0,0,0.79);
+    -moz-box-shadow: 0px 14px 0px 1px rgba(0,0,0,0.79);
+    box-shadow: 0px 14px 0px 1px rgba(0,0,0,0.79);
+    margin: 0px;
+    width: 100vw;
+    position: initial;
+    min-width: 100vw;
+    margin-left: -20px;
+
+  }
+  .postInfo{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .uploadedImage{
+    width:90%;
+    max-width: unset;
+    max-height: unset;
+    min-height: unset;
+    min-width: 90%;
+  }
+  
+  .postContent{
+    width:90%;
+    font-size: 20px;
+  }
+  .profilePicTwo{
+    width:100%;
+    max-width: unset;
+    max-height: unset;
+    min-height: unset;
+  }
+  .profileNamesTwo{
+    margin-left: 10px;
+  }
+  .postTitle{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:5px;
+  }
+
+  .picAndTitle{
+    font-size: 40px;
+    display: none;
+    position: -ms-page;
+  }
+  
+  .postButtons{
+    font-size: 20px;
+  }
+
+}

@@ -9,6 +9,7 @@
 
 .addPostBox {
   margin-bottom: 0px;
+  background-color: #181a1b;
   height: 65%;
   width: 75%;
   opacity: 0.9;
@@ -85,3 +86,55 @@
   margin-bottom: 20px;
   justify-content: space-evenly;
 }
+
+@media (max-width:1025px) {
+  .titleImagePageTitles{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  .addPostPageTitle{
+    width:auto;
+  }
+
+  .addPostPageTitleBox{
+    width: auto;
+  }
+
+  .addPostInputs{
+    margin:0px;
+    width: auto;
+  }
+
+  .AddPButtons{
+    padding: 10px;
+    font-size: 21px;
+    width: 100px;
+  }
+  
+  .addPostButtons{
+    width:75%;
+  }
+
+  .postInput{
+    padding: 15px 10px;
+    font-size: 30px;
+    height: 10px;
+    width: 100%;
+  }
+
+  .postInputBox{
+    font-size: 30px;
+  }
+
+}
+
+@media (max-width:500px) {
+  .addPostBox{
+    width:100vw;
+    height:67%;
+  }
+
+}
+

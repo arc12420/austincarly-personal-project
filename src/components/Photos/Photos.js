@@ -35,6 +35,7 @@ class Photos extends Component {
       return (
         <div className="pullPhotos" key="element.title">
           <div className="titleAndX">
+            <div className="pSpace"/>
             <p className="albumImageTitle">{element.title}</p>
             <h5
               className="photoDeleteButton"

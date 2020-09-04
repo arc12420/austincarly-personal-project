@@ -40,8 +40,8 @@ class Add_Photo extends Component {
       });
   };
 
-  render(props) {
-    console.log(this.state);
+  render() {
+    console.log(this.props);
     return (
       <div className="addPhotoComponent">
         <main className="addPhotoBox">
@@ -50,17 +50,20 @@ class Add_Photo extends Component {
             <input
               onChange={(event) => this.handleAddPhotoTitle(event.target.value)}
               className="addPhotoTitle"
+              className="aPI"
               placeholder="Title"
             />
             <input
               onChange={(event) => this.handleAddPhotoImg(event.target.value)}
               className="addPhotoURL"
+              className="aPI"
               placeholder="Image URL"
             />
           </div>
           <div className="addPhotoButtons">
-            <button onClick={this.addPhotoFunc}> Save </button>
+            <button className="aPB" onClick={this.addPhotoFunc}> Save </button>
             <button
+              className="aPB"
               onClick={() => {
                 this.props.history.push(
                   `/photos/${this.parser(this.props.location.pathname)}`

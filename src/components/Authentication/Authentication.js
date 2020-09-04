@@ -40,25 +40,26 @@ class Authentication extends Component {
   render() {
     return (
       <div className="AuthenticationComponent">
-        <main>
+        <main className="authenticationLoginBox">
           <img src={logo} className="authenticationLogo" alt="Logo" />
           <h6 className="welcome">Welcome!</h6>
           <div className="authenticationInputsAndButtons">
             <div className="authenticationInputs">
               <input
                 placeholder="Email"
+                className="authenticationEmailInput"
                 onChange={(event) => this.handleEmail(event.target.value)}
               />
               <input
                 placeholder="Password"
-                className="passwordInput"
+                className="authenticationPasswordInput"
                 type="password"
                 onChange={(event) => this.handlePassword(event.target.value)}
               />
             </div>
             <div className="authenticationButtons">
-              <button onClick={this.login}> Sign-in </button>
-              <button onClick={() => this.props.history.push("/Registration")}>
+              <button className="authButtons" onClick={this.login}> Sign-in </button>
+              <button className="authButtons" onClick={() => this.props.history.push("/Registration")}>
                 {" "}
                 Register{" "}
               </button>

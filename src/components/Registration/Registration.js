@@ -63,28 +63,33 @@ class Registration extends Component {
               <input
                 onChange={(event) => this.handleFirstName(event.target.value)}
                 placeholder="First Name"
+                className="regInputs"
               />
               <input
                 onChange={(event) => this.handleLastName(event.target.value)}
                 placeholder="Last Name"
+                className="regInputs"
               />
               <input
                 onChange={(event) => this.handleEmail(event.target.value)}
                 placeholder="Email"
+                className="regInputs"
               />
               <input
                 onChange={(event) => this.handlePassword(event.target.value)}
                 placeholder="Password"
+                className="regInputs"
                 type="password"
               />
               <input
                 onChange={(event) => this.handleProfilePic(event.target.value)}
                 placeholder="Profile Picture URL"
+                className="regInputs"
               />
             </div>
             <div className="registrationButtons">
-              <button onClick={this.register}> Sign-up </button>
-              <button onClick={() => this.props.history.push("/")}>
+              <button className="regButtons" onClick={this.register}> Sign-up </button>
+              <button className="regButtons" onClick={() => this.props.history.push("/")}>
                 {" "}
                 Cancel{" "}
               </button>

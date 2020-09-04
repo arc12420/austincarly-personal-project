@@ -8,6 +8,7 @@ import "./reset.css";
 import axios from "axios";
 import { loginUser } from "../src/redux/reducer";
 import { connect } from "react-redux";
+import Navigation_Tabs from "./components/Navigation_Tabs/Navigation_Tabs";
 
 class App extends Component {
   componentDidMount() {
@@ -28,6 +29,11 @@ class App extends Component {
                 .pathname === "/Registration" ? null : (
               <Navigation />
             )}
+            {this.props.location.pathname === "/" ? null : this.props.location
+                .pathname === "/Registration" ? null : (
+              <Navigation_Tabs/>
+            )}
+            
             {routes}
           </header>
         </div>

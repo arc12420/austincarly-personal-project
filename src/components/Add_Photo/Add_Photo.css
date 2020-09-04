@@ -48,3 +48,64 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
+@media (max-width:1025px) {
+  .addPhotoBox{
+    width: 65vw;
+    height: 55vh;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+  }
+
+  .addPhotoBoxTitle {
+    font-size: 45px;
+    margin-top: 20px;
+  }
+
+  .aPI {
+    padding:15px 10px;
+    font-size: 27px;
+  }
+
+  .aPB {
+    padding:10px;
+    font-size: 27px;
+  }
+
+  .inputs{
+    height:40%;
+    margin:0px;
+  }
+
+}
+
+@media (max-width:500px) {
+  .addPhotoBox{
+    width: 100vw;
+    height: 75vh;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+  }
+
+  .addPhotoBoxTitle {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  .aPI {
+    padding:13px 3px;
+    font-size: 27px;
+  }
+
+  .aPB {
+    padding:10px;
+    font-size: 27px;
+  }
+
+  .inputs{
+    height:40%;
+    margin:0px;
+  }
+
+}
+

@@ -92,11 +92,11 @@ class Add_Post extends Component {
           />
           <div className="addPostButtons">
             {!this.state.edit ? (
-            <button onClick={this.makePost}>Post</button>
+            <button className="AddPButtons" onClick={this.makePost}>Post</button>
             ) : (
-              <button onClick={this.updatePost}> Save </button>
+              <button className="AddPButtons" onClick={this.updatePost}> Save </button>
             )}
-            <button onClick={() => this.props.history.push("/Home")}>
+            <button className="AddPButtons" onClick={() => this.props.history.push("/Home")}>
               Cancel
             </button>
           </div>

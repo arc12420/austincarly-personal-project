@@ -8,9 +8,9 @@
   color: rgb(233, 233, 233);
 }
 
-main {
-  height: 500px;
-  width: 500px;
+.authenticationLoginBox {
+  height: 60vh;
+  width: 35vw;
   color: #dad7d2;
   background-color: #181a1b;
   opacity: 0.9;
@@ -39,7 +39,7 @@ main {
   height: 60%;
   width: 50%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   justify-content: flex-start;
   justify-content: space-around;
@@ -63,7 +63,6 @@ main {
 
 .authenticationLogo {
   margin-top: 20px;
-  margin-left: 45px;
   filter: invert(1);
 }
 
@@ -72,6 +71,68 @@ main {
   font-size: 30px;
 }
 
-.passwordInput{
+@media (max-width: 1025px) {
+  .authenticationLoginBox{
+    width: 65vw;
+    height: 55vh;
+    margin-bottom: 40px;
+  }
+
+  .authenticationEmailInput{
+    padding:15px 10px;
+    font-size: 21px;
+  }
+
+  .authenticationPasswordInput{
+    padding:15px 10px;
+    font-size: 21px;
+  }
+
+  .authButtons{
+    padding:10px;
+    font-size: 21px;
+
+  }
+
+  .welcome{
+    font-size: 40px;
+  }
+
+  .authenticationLogo{
+    height: 17%;
+  }
+
   
+}
+
+@media (max-width: 500px) {
+  .authenticationLoginBox{
+    width: 100vw;
+    height: 80vh;
+    margin-bottom: 40px;
+  }
+
+  .authenticationEmailInput{
+    padding:13px 8px;
+    font-size: 18px;
+  }
+
+  .authenticationPasswordInput{
+    padding:13px 8px;
+    font-size: 18px;
+  }
+
+  .authButtons{
+    padding:8px;
+    font-size: 18px;
+
+  }
+
+  .welcome{
+    font-size: 40px;
+  }
+
+  .authenticationLogo{
+    height: 15%;
+  }
 }

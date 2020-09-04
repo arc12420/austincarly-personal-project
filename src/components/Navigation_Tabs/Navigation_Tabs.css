@@ -1,0 +1,54 @@
+.navigationTabsComponent {
+    display: none;
+  }
+  
+  @media (max-width:1025px) {
+    .navigationTabsComponent {
+        height: auto;
+        word-wrap: normal;
+        /* height: 35px; */
+        width: 100vw;
+        color: #dad7d2;
+        background-color: #181a1b;
+        opacity: 0.9;
+        border-radius: 4px;
+        -webkit-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+        -moz-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+        box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+      }
+      
+      .homeButtonTab {
+        cursor: pointer;
+        font-size: 30px;
+      }
+      
+      .navigationAddPhotoButtonTab {
+        cursor: pointer;
+        font-size: 30px;
+        ;
+      }
+      /* bodyHome .homeButtonTab{
+          display: none;
+      } */
+
+
+      .addPostTab {
+        cursor: pointer;
+        font-size: 30px;
+      }
+
+      .PhotoAlbumsTab{
+        cursor: pointer;
+        font-size: 30px;
+      }
+  
+  }
+  
+  @media (max-width:500px) {
+  
+  }
+  
