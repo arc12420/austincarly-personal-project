@@ -8,12 +8,15 @@ class Photos extends Component {
     super();
     this.state = {
       photos: [],
+      album: []
     };
   }
 
   componentDidMount() {
     this.getData();
+    this.getAlbumName();
     console.log(this.props.match)
+    console.log(this.state)
   }
   async getData() {
     const photos = await axios.get(
@@ -21,6 +24,15 @@ class Photos extends Component {
     );
     this.setState({
       photos: photos.data,
+    });
+  }
+
+  async getAlbumName() {
+    const album = await axios.get(
+      `/api/album/${this.props.match.params.albumid}`
+    );
+    this.setState({
+      album: album.data,
     });
   }
 
@@ -50,11 +62,11 @@ class Photos extends Component {
         </div>
       );
     });
-    console.log(this.state.photos);
+    console.log(this.state.album);
     return (
       <div className="albumPhotosComponent">
         <main className="albumPhotosInfo">
-          <h6 className="photoAlbumTitlePage">YOUR TITLE HERE</h6>
+          <h6 className="photoAlbumTitlePage">{this.state.album.title}</h6>
           <div className="photoWrapper">{mappedPhotos}</div>
         </main>
       </div>

@@ -103,5 +103,14 @@
 }
 
 @media (max-width:500px) {
-
+  .navLogo{
+    width:30%;
+  }
+  .welcomeAndEdit{
+    font-size: 15px;
+  }
+  
+  .navWelcome{
+    text-align: right;
+  }
 }

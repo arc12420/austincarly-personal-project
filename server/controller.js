@@ -111,6 +111,21 @@ module.exports = {
       });
   },
 
+  getAlbum: (req, res) => {
+    const db = req.app.get("db");
+    const { id } = req.params;
+
+    db.getAlbum(id)
+      .then((albums) => res.status(200).send(albums[0]))
+      .catch((err) => {
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!",
+        });
+        console.log(err);
+      });
+  },
+
   getAllAlbums: (req, res) => {
     const db = req.app.get("db");
 
@@ -127,6 +142,7 @@ module.exports = {
 
   register: async (req, res) => {
     const db = req.app.get("db");
+    const transporter = req.app.get("transporter");
     const { firstName, lastName, email, password, profilePic } = req.body;
     const existingUser = await db.getUser(email);
     if (existingUser[0]) {
@@ -141,6 +157,21 @@ module.exports = {
       hash,
       profilePic,
     ]);
+    const mailOptions = {
+      from: "howsyourbrood@gmail.com",
+      to: email,
+      subject: `Welcome ${firstName} ${lastName}`,
+      text: `Welcome ${firstName} ${lastName}! We are so happy you have joined us today!`
+
+    }
+    transporter.sendMail(mailOptions, (err, data) => {
+      if (err){
+        console.log(err)
+      } else {
+        console.log("Email sent successfully!")
+      }
+    })
+
     console.log(newUser);
     req.session.user = {
       userId: newUser.id,

@@ -1,8 +1,103 @@
 .navigationTabsComponent {
     display: none;
   }
+
+  .homeAlbumListTabs{
+    display: none;
+  }
   
   @media (max-width:1025px) {
+
+    .homeAlbumListTabs{
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      display:none;
+
+    }
+
+    .smallestAlbumName{
+      /* display:none; */
+    }
+
+    .PhotoAlbumsTab:hover + .homeAlbumListTabs{
+      display:flex;
+    }
+
+    .albumComponent{
+      width:100%;
+    }
+
+    hr{
+      width: 80%;
+    }
+    
+    li{background-color: #181a1b;
+      font-size: 30px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+    
+    }
+
+    ul{
+      width:100%;
+      /* float: right; */
+      margin-right: 70px;
+      position: fixed;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .PhotoAlbumsTab{
+      width:170px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .PhotoAlbumsTab ul{
+      list-style: none;
+      margin-top: 2%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .PhotoAlbumsTab ul li{
+      background: #181a1b;
+      width:170px;
+      height: auto;
+      line-height: 50px;
+      text-align: center;
+      float: left;
+      position: relative;
+      
+    }
+    
+    .allAlbumNamesTab{
+      width:250px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .PhotoAlbumsTab ul ul {
+      display: none;
+    }
+
+    .smallestAlbumName{
+      display: flex;
+      justify-content: space-between;
+      padding:20px;
+    }
+
+
+
     .navigationTabsComponent {
         height: auto;
         word-wrap: normal;
@@ -49,6 +144,47 @@
   }
   
   @media (max-width:500px) {
+    .navigationTabsComponent{
+      justify-content: space-evenly;
+      width:100vw;
+      padding:10px;
+      height: auto;
+    }
+    .PhotoAlbumsTab{
+      width:auto;
+      height:auto;
+    }
+    .wholeComponent{
+      width:100vw;
+      height: auto;
+      font-size: 18px;
+
+    }
+
+    .homeButtonTab{
+      height: auto;
+      font-size: 18px;
+
+    }
+
+    .addPostTab{
+      height:auto;
+      font-size: 18px;
+
+    }
+
+    .navigationAddPhotoButtonTab{
+      height:auto;
+      font-size: 18px;
+
+    }
+
+    .PhotoAlbumsTab{
+      height: auto;
+      font-size: 18px;
+
+    }
+    
   
   }
   

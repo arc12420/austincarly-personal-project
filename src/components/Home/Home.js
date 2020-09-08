@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Post from "../Post/Post";
 import Album from "../Album/Album";
+import Post from "../Post/Post";
 import Add_Album from "../Add_Album/Add_Album";
 import "./Home.css";
 
