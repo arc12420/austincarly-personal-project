@@ -1,0 +1,194 @@
+// Variables
+$commonHeight: 100vh;
+$commonWidth: 100vw;
+$commonDisplay: flex;
+$commonJustify: center;
+$commonBackGroundColor: #181a1b;
+$commonFontColor: #dad7d2;
+
+
+@mixin boxSetup2{
+    opacity: .95;
+    border-radius: 4px;
+    -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+    -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+    box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+}
+
+@mixin flexer{
+    display: $commonDisplay;
+    justify-content: $commonJustify;
+}
+
+@mixin colors{
+    background-color: $commonBackGroundColor;
+    color: $commonFontColor;
+}
+
+.homePage {
+    @include flexer;
+    height: auto;
+    width: 100vw;
+    align-items: center;
+  }
+  
+  .homePagePosts {
+      @include colors;
+      @include boxSetup2;
+    min-height: 200px;
+    height: auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    align-items: center;
+    padding: 20px;
+  }
+  .pullPost {
+    @include flexer;
+    min-height: 200px;
+    width: 1000px;
+    border-radius: 4px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .namePicAndTitle {
+    width: 15%;
+    height: 90%;
+    background-color: grey;
+  }
+  
+  .updateAndPost {
+    width: 75%;
+    height: 90%;
+    background-color: grey;
+  }
+  
+  .homeAlbums {
+      @include colors;
+      @include boxSetup2;
+    min-height: 310px;
+    height: auto;
+    width: 150px;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 200px;
+  }
+  
+  .HomeAlbumList {
+    height: auto;
+    width: 100vw;
+  }
+  
+  .allAlbumNames {
+    height: auto;
+    width: 100vw;
+    cursor: pointer;
+  }
+  
+  .albumNamesComp {
+    height: auto;
+    width: 100vw;
+  }
+  
+  /* .homeAddAlbum {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;  
+     margin-top: 10px;
+  } */
+  
+  /* .dropDownBox{
+    cursor: pointer;  
+  }  */
+  
+  .homeAddAlbum {
+    cursor: pointer;
+  }
+  
+  /* .dropContent{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }  */
+  
+  @media (max-width:1025px) {
+    .homeAlbums{
+      display: none;
+    }
+  
+    .namePicAndTitle{
+      height:100%;
+      width: 20%;
+  
+    }
+    /* .picAndTitle{
+      height:100%;
+    } */
+  
+    .postComponent{
+      justify-content: unset;
+      width: 100%;
+    }
+  
+    .pullPost{
+      width: 99vw;
+      padding-left: 45px;
+  
+    }
+  
+    .homePagePosts{
+      margin-top: 50px;
+    }
+  
+  }
+  
+  @media (max-width:500px) {
+    .pullPost{
+      width: 70vw;
+      margin-left: -120px;
+    }
+  
+    .profileInfoTwo{
+      max-width: 20%;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .profileNamesTwo{
+      display: flex;
+      justify-content: space-around;    
+      flex-direction: column;
+      height:auto;
+    }
+  
+    .profilePicTwo{
+      max-width: 100%;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    
+    .profileFirstNameTwo{
+      font-size: 20px;
+      margin: 0px;
+    }
+    
+    .profileLastNameTwo{
+      font-size: 20px;
+      margin: 0px;
+    }
+  
+    
+  }

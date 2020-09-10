@@ -1,0 +1,141 @@
+// Variables
+$commonHeight: 100vh;
+$commonWidth: 100vw;
+$commonDisplay: flex;
+$commonJustify: center;
+$commonBackGroundColor: #181a1b;
+$commonFontColor: #dad7d2;
+
+@mixin boxSetup1{
+    opacity: .95;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+    -moz-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+    box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+}
+@mixin boxSetup2{
+    opacity: .95;
+    border-radius: 4px;
+    -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+    -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+    box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+}
+
+@mixin flexer{
+    display: $commonDisplay;
+    justify-content: $commonJustify;
+}
+
+@mixin fullscreen{
+    height: $commonHeight;
+    width: $commonWidth;    
+}
+
+@mixin colors{
+    background-color: $commonBackGroundColor;
+    color: $commonFontColor;
+}
+
+.addPhotoComponent {
+    @include fullscreen;
+    @include flexer;
+    align-items: center;
+  }
+  
+  .addPhotoBox {
+      @include colors;
+      @include boxSetup2;
+      @include flexer;
+    height: 500px;
+    width: 500px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;  
+     
+  }
+  
+  .addPhotoBoxTitle {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  
+  .inputs {
+    height: 150px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+  
+  .addPhotoButtons {
+      @include flexer;
+    height: 150px;
+    width: 500px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  @media (max-width:1025px) {
+    .addPhotoBox{
+      width: 65vw;
+      height: 55vh;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+    }
+  
+    .addPhotoBoxTitle {
+      font-size: 45px;
+      margin-top: 20px;
+    }
+  
+    .aPI {
+      padding:15px 10px;
+      font-size: 27px;
+    }
+  
+    .aPB {
+      padding:10px;
+      font-size: 27px;
+    }
+  
+    .inputs{
+      height:40%;
+      margin:0px;
+    }
+  
+  }
+  
+  @media (max-width:500px) {
+    .addPhotoBox{
+      width: 100vw;
+      height: 75vh;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+    }
+  
+    .addPhotoBoxTitle {
+      font-size: 40px;
+      margin-top: 20px;
+    }
+  
+    .aPI {
+      padding:13px 3px;
+      font-size: 27px;
+    }
+  
+    .aPB {
+      padding:10px;
+      font-size: 27px;
+    }
+  
+    .inputs{
+      height:40%;
+      margin:0px;
+    }
+  
+  }
+  
+  

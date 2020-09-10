@@ -1,90 +1,89 @@
 .albumPhotosComponent {
-  display: flex;
-  justify-content: center;
   height: auto;
   width: 100vw;
-  align-items: flex-start;
-}
-
-.albumPhotosInfo {
-  background-color: #181a1b;
-  color: #dad7d2;
-  opacity: 0.95;
-  border-radius: 4px;
-  -webkit-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
-  -moz-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
-  box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+}
+.albumPhotosInfo {
   min-height: 600px;
   height: auto;
   width: 1300px;
+  color: #dad7d2;
+  background-color: #181a1b;
+  opacity: 0.9;
+  border-radius: 4px;
+  -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
   margin-top: 65px;
   margin-bottom: 200px;
   align-items: center;
   padding: 20px;
   padding-bottom: 40px;
+  display: flex;
   flex-direction: row;
+  justify-content: center;
   justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
 .pullPhotos {
-  display: flex;
-  justify-content: center;
-  opacity: 0.95;
-  border-radius: 4px;
-  -webkit-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
-  -moz-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
-  box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
-  margin-top: 100px;
+  margin-top: 100px;  
   height: auto;
   padding-bottom: 20px;
   padding-top: 20px;
   width: 300px;
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   color: #dad7d2;
   background-color: grey;
+  opacity: 0.9;
+  border-radius: 4px;
+  -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
 }
 
-.photoWrapper {
-  display: flex;
-  justify-content: center;
-  height: 100%;
+.photoWrapper{
+  height:100%;
   width: 100%;
+  display: flex;
   flex-direction: row;
+  justify-content: center;
   justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
-.pSpace {
+.pSpace{    
   min-height: 100%;
   min-width: 5%;
 }
 
 .albumImageTitle {
-  display: flex;
-  justify-content: center;
   width: auto;
   max-width: 90%;
   height: auto;
+  display: flex;
+  justify-content: center;
   align-items: flex-start;
   max-width: 25vw;
-  margin-top: 20px;
+  margin-top: 20px;  
   text-align: center;
   margin-bottom: 10px;
   font-size: 25px;
   word-wrap: normal;
 }
 
-.photoAlbumTitlePage {
+.photoAlbumTitlePage{
+  height:10%;
+  width:100%;
   display: flex;
   justify-content: center;
-  height: 10%;
-  width: 100%;
   align-items: center;
   font-size: 40px;
   text-decoration: underline;
@@ -93,10 +92,10 @@
 }
 
 .titleAndX {
-  display: flex;
-  justify-content: center;
   width: 100%;
   height: 35px;
+  display: flex;
+  justify-content: center;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
@@ -113,10 +112,21 @@
 }
 
 .albumImageBox {
-  display: flex;
-  justify-content: center;
   height: auto;
   width: 95%;
+  display: flex;
+  justify-content: center;
+  opacity: 0.9;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.albumImageBox {
+  height: auto;
+  /* height: 85%; */
+  width: 95%;
+  display: flex;
+  justify-content: center;
   opacity: 0.9;
   border-radius: 4px;
   margin-top: 5px;
@@ -133,12 +143,13 @@
   bottom: 0;
 }
 
-@media (max-width: 1025px) {
-  .pullPhotos {
+@media (max-width:1025px) {
+
+  .pullPhotos{
     height: auto;
     padding-bottom: 20px;
   }
-
+  
   .albumImageTitle {
     font-size: 30px;
     width: auto;
@@ -147,9 +158,10 @@
     word-wrap: normal;
     text-align: center;
     margin-bottom: 5px;
+
   }
 
-  .titleAndX {
+  .titleAndX{
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -161,14 +173,14 @@
     /* position: relative; */
   }
 
-  .pSpace {
+  .pSpace{    
     min-height: 100%;
     min-width: 5%;
   }
-
-  .photoAlbumTitlePage {
-    height: 10%;
-    width: 100%;
+  
+  .photoAlbumTitlePage{
+    height:10%;
+    width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,7 +188,7 @@
     text-decoration: underline;
     margin-top: 20px;
   }
-
+  
   .photoDeleteButton {
     height: 100%;
     width: 5%;
@@ -186,7 +198,7 @@
     margin-top: 10px;
     padding: 5px;
   }
-
+  
   .albumImageBox {
     height: auto;
     /* height: 85%; */
@@ -197,7 +209,7 @@
     border-radius: 4px;
     margin-top: 5px;
   }
-
+  
   .albumImage {
     margin-top: 10px;
     width: 90%;
@@ -209,16 +221,16 @@
     bottom: 0;
   }
 }
-@media (max-width: 500px) {
-  .pullPhotos {
+
+@media (max-width:500px) {
+
+  .pullPhotos{
     height: auto;
     padding-bottom: 20px;
     margin-top: 50px;
   }
 
-  .albumPhotosInfo {
+  .albumPhotosInfo{
     margin-bottom: 60px;
   }
 }
-
-/*# sourceMappingURL=Photos.css.map */

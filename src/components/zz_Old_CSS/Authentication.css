@@ -5,40 +5,41 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  color: rgb(233, 233, 233);
 }
 
 .authenticationLoginBox {
-  background-color: #181a1b;
-  color: #dad7d2;
-  opacity: 0.95;
-  border-radius: 4px;
-  -webkit-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
-  -moz-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
-  box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
-  display: flex;
-  justify-content: center;
   height: 60vh;
   width: 35vw;
+  color: #dad7d2;
+  background-color: #181a1b;
+  opacity: 0.9;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
+  -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+  box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
 }
 
 .authenticationInputsAndButtons {
-  justify-content: space-evenly;
-  display: flex;
-  justify-content: center;
   height: 60%;
   width: 100%;
+  display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
 .authenticationInputs {
-  display: flex;
-  justify-content: center;
   height: 60%;
   width: 50%;
+  display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: flex-start;
   justify-content: space-around;
@@ -47,13 +48,18 @@
 }
 
 .authenticationButtons {
-  display: flex;
-  justify-content: center;
   height: auto;
   width: 70%;
+  display: flex;
   flex-direction: row;
+  justify-content: center;
   justify-content: space-evenly;
 }
+/* .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 .authenticationLogo {
   margin-top: 20px;
@@ -66,64 +72,67 @@
 }
 
 @media (max-width: 1025px) {
-  .authenticationLoginBox {
+  .authenticationLoginBox{
     width: 65vw;
     height: 55vh;
     margin-bottom: 40px;
   }
 
-  .authenticationEmailInput {
-    padding: 15px 10px;
+  .authenticationEmailInput{
+    padding:15px 10px;
     font-size: 21px;
   }
 
-  .authenticationPasswordInput {
-    padding: 15px 10px;
+  .authenticationPasswordInput{
+    padding:15px 10px;
     font-size: 21px;
   }
 
-  .authButtons {
-    padding: 10px;
+  .authButtons{
+    padding:10px;
     font-size: 21px;
+
   }
 
-  .welcome {
+  .welcome{
     font-size: 40px;
   }
 
-  .authenticationLogo {
+  .authenticationLogo{
     height: 17%;
   }
+
+  
 }
+
 @media (max-width: 500px) {
-  .authenticationLoginBox {
+  .authenticationLoginBox{
     width: 100vw;
     height: 80vh;
     margin-bottom: 40px;
   }
 
-  .authenticationEmailInput {
-    padding: 13px 8px;
+  .authenticationEmailInput{
+    padding:13px 8px;
     font-size: 18px;
   }
 
-  .authenticationPasswordInput {
-    padding: 13px 8px;
+  .authenticationPasswordInput{
+    padding:13px 8px;
     font-size: 18px;
   }
 
-  .authButtons {
-    padding: 8px;
+  .authButtons{
+    padding:8px;
     font-size: 18px;
+
   }
 
-  .welcome {
+  .welcome{
     font-size: 40px;
   }
 
-  .authenticationLogo {
+  .authenticationLogo{
     height: 15%;
   }
 }
-
-/*# sourceMappingURL=Authentication.css.map */

@@ -1,0 +1,144 @@
+// Variables
+$commonHeight: 100vh;
+$commonWidth: 100vw;
+$commonDisplay: flex;
+$commonJustify: center;
+$commonBackGroundColor: #181a1b;
+$commonFontColor: #dad7d2;
+
+@mixin boxSetup1{
+    opacity: .95;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+    -moz-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+    box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+}
+@mixin boxSetup2{
+    opacity: .95;
+    border-radius: 4px;
+    -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+    -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+    box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+}
+
+@mixin flexer{
+    display: $commonDisplay;
+    justify-content: $commonJustify;
+}
+
+@mixin fullscreen{
+    height: $commonHeight;
+    width: $commonWidth;    
+}
+
+@mixin colors{
+    background-color: $commonBackGroundColor;
+    color: $commonFontColor;
+}
+
+.navigationComponent {
+    @include colors;
+    @include boxSetup1;
+    @include flexer;
+    height: 100px;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navLogo {
+    filter: invert(1);
+    margin-left: 20px;
+  }
+  
+  .homeButton {
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  .navigationAddPhotoButton {
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  .addPost {
+    cursor: pointer;
+    font-size: 25px;
+  }
+  .editProfileButton {
+    cursor: pointer;
+  }
+  .signOutButton {
+    cursor: pointer;
+  }
+  
+  .profileBox {
+    max-height: 100px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .profilePicBox {
+      @include flexer;
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 10px;
+  }
+  
+  .navProfilePic {
+    height: 80px;
+    width: 80px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .welcomeAndEdit {
+      @include flexer;
+    margin: 5px;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  
+  .navWelcome {
+    margin: 5px;
+  }
+  
+  .editProfileButton {
+    margin: 5px;
+  }
+  
+  .navSignout {
+    margin: 5px;
+    display: flex;
+  }
+  
+  @media (max-width:1025px) {
+    .homeButton {
+      display: none;
+    }
+    
+    .navigationAddPhotoButton {
+      display: none;
+    }
+    
+    .addPost {
+      display: none;
+    }
+  
+  }
+  
+  @media (max-width:500px) {
+    .navLogo{
+      width:30%;
+    }
+    .welcomeAndEdit{
+      font-size: 15px;
+    }
+    
+    .navWelcome{
+      text-align: right;
+    }
+  }
+  

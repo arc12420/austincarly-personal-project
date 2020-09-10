@@ -1,0 +1,132 @@
+.registrationComponent {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registrationBox {
+  background-color: #181a1b;
+  color: #dad7d2;
+  display: flex;
+  justify-content: center;
+  opacity: 0.9;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
+  -moz-box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
+  box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
+  height: 60vh;
+  width: 35vw;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.registrationPageTitle {
+  font-size: 30px;
+}
+
+.inputsAndButtons {
+  display: flex;
+  justify-content: center;
+  height: 60%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.registrationInputs {
+  height: 60%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.registrationButtons {
+  margin-top: 20px;
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.registrationLogo {
+  margin-top: 20px;
+  filter: invert(1);
+}
+
+@media (max-width: 1025px) {
+  .registrationBox {
+    width: 65vw;
+    height: 55vh;
+    margin-bottom: 40px;
+  }
+
+  .regInputs {
+    padding: 10px 8px;
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  .registrationInputs {
+    display: flex;
+    justify-content: space-between;
+    height: 70%;
+  }
+
+  .regButtons {
+    padding: 12px;
+    font-size: 23px;
+  }
+
+  .registrationPageTitle {
+    font-size: 42px;
+  }
+
+  .registrationLogo {
+    height: 17%;
+  }
+}
+@media (max-width: 500px) {
+  .registrationBox {
+    width: 100vw;
+    height: 80vh;
+    margin-bottom: 40px;
+  }
+
+  .regInputs {
+    padding: 10px 8px;
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  .registrationInputs {
+    display: flex;
+    justify-content: space-between;
+    height: 70%;
+  }
+
+  .registrationButtons {
+    width: 100%;
+    margin-top: 35px;
+  }
+
+  .regButtons {
+    padding: 8px;
+    font-size: 20px;
+  }
+
+  .registrationPageTitle {
+    font-size: 42px;
+  }
+
+  .registrationLogo {
+    height: 14%;
+  }
+}
+
+/*# sourceMappingURL=Registration2.css.map */

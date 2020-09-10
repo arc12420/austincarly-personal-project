@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { loginUser } from "../../redux/reducer";
-import "./Registration.css";
+// import "./Registration.css";
+import "./Registration2.css";
 import logo from "../../Logo.png";
 import axios from "axios";
 

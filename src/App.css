@@ -14,8 +14,8 @@
 
 button {
   background-color: #0c0d0e;
-  opacity: 1;
   color: #dad7d2;
+  opacity: 1;
   font-size: 20px;
   cursor: pointer;
 }
@@ -29,7 +29,7 @@ input {
 
 @media (max-width: 1025px) {
   .app {
-    background: url(https://wallpaperboat.com/wp-content/uploads/2019/10/cool-website-background-03.jpg) no-repeat center center fixed; 
+    background: url(https://wallpaperboat.com/wp-content/uploads/2019/10/cool-website-background-03.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -37,10 +37,6 @@ input {
     overflow-y: hidden;
     overflow-x: hidden;
   }
-  
 }
 
-@media (max-width: 500px) {
-  
-}
-
+/*# sourceMappingURL=App.css.map */

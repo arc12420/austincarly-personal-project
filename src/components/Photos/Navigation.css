@@ -1,17 +1,18 @@
 .navigationComponent {
-  background-color: #181a1b;
-  color: #dad7d2;
-  opacity: 0.95;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
-  -moz-box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
-  box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
-  display: flex;
-  justify-content: center;
   height: 100px;
   width: 100vw;
+  color: #dad7d2;
+  background-color: #181a1b;
+  opacity: 0.9;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+  -moz-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+  box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+  display: flex;
+  justify-content: center;
   align-items: center;
   justify-content: space-between;
+  /* position: fixed; */
 }
 
 .navLogo {
@@ -33,11 +34,9 @@
   cursor: pointer;
   font-size: 25px;
 }
-
 .editProfileButton {
   cursor: pointer;
 }
-
 .signOutButton {
   cursor: pointer;
 }
@@ -49,10 +48,11 @@
 }
 
 .profilePicBox {
-  display: flex;
-  justify-content: center;
   height: 100px;
   width: 100px;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
   align-items: center;
   margin-right: 30px;
   margin-left: 10px;
@@ -61,14 +61,15 @@
 .navProfilePic {
   height: 80px;
   width: 80px;
+  /* min-width: 70px; */
   border-radius: 4px;
   object-fit: cover;
 }
 
 .welcomeAndEdit {
+  margin: 5px;
   display: flex;
   justify-content: center;
-  margin: 5px;
   align-items: flex-end;
   flex-direction: column;
 }
@@ -86,31 +87,30 @@
   display: flex;
 }
 
-@media (max-width: 1025px) {
+@media (max-width:1025px) {
   .homeButton {
     display: none;
   }
-
+  
   .navigationAddPhotoButton {
     display: none;
   }
-
+  
   .addPost {
     display: none;
   }
-}
-@media (max-width: 500px) {
-  .navLogo {
-    width: 30%;
-  }
 
-  .welcomeAndEdit {
+}
+
+@media (max-width:500px) {
+  .navLogo{
+    width:30%;
+  }
+  .welcomeAndEdit{
     font-size: 15px;
   }
-
-  .navWelcome {
+  
+  .navWelcome{
     text-align: right;
   }
 }
-
-/*# sourceMappingURL=Navigation.css.map */
