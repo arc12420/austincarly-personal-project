@@ -1,269 +1,257 @@
-
 $commonDisplay: flex;
 $commonJustify: center;
 $commonBackGroundColor: #181a1b;
 $commonFontColor: #dad7d2;
 
-@mixin boxSetup1{
-    opacity: 1;
-    border-radius: 4px;
-    -webkit-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
-    -moz-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
-    box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+@mixin boxSetup1 {
+  opacity: 1;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
+  -moz-box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
+  box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
 }
 
-@mixin boxSetup2{
-    opacity: 1;
-    border-radius: 4px;
-    -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
-    -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
-    box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
+@mixin boxSetup2 {
+  opacity: 1;
+  border-radius: 4px;
+  -webkit-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
+  -moz-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
+  box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
 }
 
-@mixin flexer{
-    display: $commonDisplay;
-    justify-content: $commonJustify;
+@mixin flexer {
+  display: $commonDisplay;
+  justify-content: $commonJustify;
 }
 
-@mixin colors{
-    background-color: $commonBackGroundColor;
-    color: $commonFontColor;
+@mixin colors {
+  background-color: $commonBackGroundColor;
+  color: $commonFontColor;
 }
-
-
 
 .postComponent {
-    @include flexer;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    align-items: flex-start;
-    justify-content: space-around;
-  }
-  
+  @include flexer;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.namePicAndTitle {
+  @include colors;
+  @include boxSetup1;
+  width: 15vw;
+  height: 90vh;
+  color: black;
+}
+
+.picAndTitle {
+  padding: 5px;
+}
+
+.postContent {
+  max-width: 90%;
+  overflow: visible;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+.updateAndPost {
+  @include colors;
+  @include boxSetup2;
+  width: 75vw;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  color: black;
+}
+
+.postButtons {
+  width: 100px;
+  margin-top: 10px;
+  margin-right: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.postTitle {
+  width: 650px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.editAndX {
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.postInfo {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.titleAndButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.uploadedImage {
+  border-radius: 4px;
+  max-height: 250px;
+  max-width: 250px;
+  min-height: 250px;
+  margin-right: 20px;
+  // opacity: .999;
+  object-fit: contain;
+  opacity: 1500%;
+}
+
+.profilePic {
+  max-height: 135px;
+  max-width: 135px;
+  min-width: 135px;
+  margin: 2.5px;
+  border-radius: 4px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.profileInfoTwo {
+  display: none;
+}
+
+@media (max-width: 1025px) {
   .namePicAndTitle {
-    @include colors;
-    @include boxSetup1;
-    width: 15vw;
-    height: 90vh;    
-    color: black;    
-  }
-  
-  .picAndTitle {
-    padding: 5px;
-  }
-  
-  .postContent {
-    max-width: 90%;
-    overflow: visible;
-    word-wrap: break-word;
-    word-break: normal;
-  }
-  
-  .updateAndPost {
-      @include colors;
-      @include boxSetup2;
-    width: 75vw;
-    height: 90vh;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    color: black;
-  }
-  
-  .postButtons {
-    width: 100px;
-    margin-top: 10px;
-    margin-right: 4px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  
-  .postTitle {
-    width: 650px;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-size: 25px;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  
-  .editAndX {
-    margin-left: 10px;
+    -webkit-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
+    -moz-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
+    box-shadow: -0px 14px 11px 1px rgba(0, 0, 0, 0.79);
+    margin: 0px;
     margin-right: 10px;
-    cursor: pointer;
   }
-  
+
+  .updateAndPost {
+    -webkit-box-shadow: 0px 14px 0px 1px rgba(0, 0, 0, 0.79);
+    -moz-box-shadow: 0px 14px 0px 1px rgba(0, 0, 0, 0.79);
+    box-shadow: 0px 14px 0px 1px rgba(0, 0, 0, 0.79);
+    margin: 0px;
+  }
   .postInfo {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-  }
-  
-  .titleAndButtons {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .uploadedImage {
-    border-radius: 4px;
-    max-height: 250px;
-    max-width: 250px;
-    min-height: 250px;
-    margin-right: 20px;
-    opacity: 1;
-    object-fit: contain;
-  }
-  
-  .profilePic {
-    max-height: 135px;
-    max-width: 135px;
-    min-width: 135px;
-    margin: 2.5px;
-    border-radius: 4px;
-    object-fit: cover;
-    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  
-  .profileInfoTwo{
+
+  .uploadedImage {
+    width: 90%;
+    max-width: unset;
+    max-height: unset;
+    min-height: unset;
+    min-width: 90%;
+  }
+
+  .postContent {
+    width: 90%;
+    font-size: 38px;
+  }
+  .profilePic {
+    width: 95%;
+    max-width: unset;
+    max-height: unset;
+    min-height: unset;
+  }
+  .postTitle {
+    font-size: 40px;
+  }
+
+  .picAndTitle {
+    font-size: 40px;
+  }
+
+  .postButtons {
+    font-size: 30px;
+  }
+
+  .profileInfoTwo {
     display: none;
   }
-  
-  
-  @media (max-width:1025px) {
-    .namePicAndTitle{
-      -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
-      -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
-      box-shadow: -0px 14px 11px 1px rgba(0,0,0,0.79);
-      margin:0px;
-      margin-right: 10px;
-  
-    }
-  
-    .updateAndPost{    
-      -webkit-box-shadow: 0px 14px 0px 1px rgba(0,0,0,0.79);
-      -moz-box-shadow: 0px 14px 0px 1px rgba(0,0,0,0.79);
-      box-shadow: 0px 14px 0px 1px rgba(0,0,0,0.79);
-      margin: 0px;
-  
-    }
-    .postInfo{
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .uploadedImage{
-      width:90%;
-      max-width: unset;
-      max-height: unset;
-      min-height: unset;
-      min-width: 90%;
-    }
-    
-    .postContent{
-      width:90%;
-      font-size: 38px;
-    }
-    .profilePic{
-      width:95%;
-      max-width: unset;
-      max-height: unset;
-      min-height: unset;
-    }
-    .postTitle{
-      font-size: 40px;
-    }
-  
-    .picAndTitle{
-      font-size: 40px;
-    }
-    
-    .postButtons{
-      font-size: 30px;
-    }
-  
-    .profileInfoTwo{
-      display: none;
-    }
-  
+}
+
+@media (max-width: 500px) {
+  .namePicAndTitle {
+    -webkit-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
+    -moz-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
+    box-shadow: -0px 14px 11px 1px rgba(0, 0, 0, 0.79);
+    margin: 0px;
+    margin-right: 10px;
   }
-  
-  @media (max-width:500px) {
-    .namePicAndTitle{
-      -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
-      -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
-      box-shadow: -0px 14px 11px 1px rgba(0,0,0,0.79);
-      margin:0px;
-      margin-right: 10px;
-  
-    }
-    
-    
-  
-    .postComponent{
-      width: 100vw;
-    }
-  
-    .updateAndPost{    
-      -webkit-box-shadow: 0px 14px 0px 1px rgba(0,0,0,0.79);
-      -moz-box-shadow: 0px 14px 0px 1px rgba(0,0,0,0.79);
-      box-shadow: 0px 14px 0px 1px rgba(0,0,0,0.79);
-      margin: 0px;
-      width: 100vw;
-      position: initial;
-      min-width: 100vw;
-      margin-left: -20px;
-  
-    }
-    .postInfo{
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .uploadedImage{
-      width:90%;
-      max-width: unset;
-      max-height: unset;
-      min-height: unset;
-      min-width: 90%;
-    }
-    
-    .postContent{
-      width:90%;
-      font-size: 20px;
-    }
-    .profilePicTwo{
-      width:100%;
-      max-width: unset;
-      max-height: unset;
-      min-height: unset;
-    }
-    .profileNamesTwo{
-      margin-left: 10px;
-    }
-    .postTitle{
-      font-size: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding:5px;
-    }
-  
-    .picAndTitle{
-      font-size: 40px;
-      display: none;
-      position: -ms-page;
-    }
-    
-    .postButtons{
-      font-size: 20px;
-    }
-  
+
+  .postComponent {
+    width: 100vw;
   }
-  
+
+  .updateAndPost {
+    -webkit-box-shadow: 0px 14px 0px 1px rgba(0, 0, 0, 0.79);
+    -moz-box-shadow: 0px 14px 0px 1px rgba(0, 0, 0, 0.79);
+    box-shadow: 0px 14px 0px 1px rgba(0, 0, 0, 0.79);
+    margin: 0px;
+    width: 100vw;
+    position: initial;
+    min-width: 100vw;
+    margin-left: -20px;
+  }
+  .postInfo {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .uploadedImage {
+    width: 90%;
+    max-width: unset;
+    max-height: unset;
+    min-height: unset;
+    min-width: 90%;
+  }
+
+  .postContent {
+    width: 90%;
+    font-size: 20px;
+  }
+  .profilePicTwo {
+    width: 100%;
+    max-width: unset;
+    max-height: unset;
+    min-height: unset;
+  }
+  .profileNamesTwo {
+    margin-left: 10px;
+  }
+  .postTitle {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .picAndTitle {
+    font-size: 40px;
+    display: none;
+    position: -ms-page;
+  }
+
+  .postButtons {
+    font-size: 20px;
+  }
+}

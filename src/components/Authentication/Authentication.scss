@@ -6,155 +6,150 @@ $commonJustify: center;
 $commonBackGroundColor: #181a1b;
 $commonFontColor: #dad7d2;
 
-@mixin boxSetup1{
-    opacity: .95;
-    border-radius: 4px;
-    -webkit-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
-    -moz-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
-    box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+@mixin boxSetup1 {
+  opacity: 0.95;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
+  -moz-box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
+  box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
 }
-@mixin boxSetup2{
-    opacity: .95;
-    border-radius: 4px;
-    -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
-    -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
-    box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
-}
-
-@mixin flexer{
-    display: $commonDisplay;
-    justify-content: $commonJustify;
+@mixin boxSetup2 {
+  opacity: 0.95;
+  border-radius: 4px;
+  -webkit-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
+  -moz-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
+  box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
 }
 
-@mixin fullscreen{
-    height: $commonHeight;
-    width: $commonWidth;    
+@mixin flexer {
+  display: $commonDisplay;
+  justify-content: $commonJustify;
 }
 
-@mixin colors{
-    background-color: $commonBackGroundColor;
-    color: $commonFontColor;
+@mixin fullscreen {
+  height: $commonHeight;
+  width: $commonWidth;
+}
+
+@mixin colors {
+  background-color: $commonBackGroundColor;
+  color: $commonFontColor;
 }
 
 .AuthenticationComponent {
-    @include fullscreen;
-    @include flexer;
-    align-items: center;
-    position: relative;
-  }
-  
+  @include fullscreen;
+  @include flexer;
+  align-items: center;
+  position: relative;
+}
+
+.authenticationLoginBox {
+  @include colors;
+  @include boxSetup2;
+  @include flexer;
+  height: 60vh;
+  width: 35vw;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.authenticationInputsAndButtons {
+  justify-content: space-evenly;
+  @include flexer;
+  height: 60%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.authenticationInputs {
+  @include flexer;
+  height: 60%;
+  width: 50%;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-around;
+  padding-bottom: 30px;
+  margin-top: -20px;
+}
+
+.authenticationButtons {
+  @include flexer;
+  height: auto;
+  width: 70%;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.authenticationLogo {
+  margin-top: 20px;
+  filter: invert(1);
+}
+
+.welcome {
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+@media (max-width: 1025px) {
   .authenticationLoginBox {
-      @include colors;
-      @include boxSetup2;
-      @include flexer;
-    height: 60vh;
-    width: 35vw;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
+    width: 65vw;
+    height: 55vh;
+    margin-bottom: 40px;
   }
-  
-  .authenticationInputsAndButtons {
-    justify-content: space-evenly;
-      @include flexer;
-    height: 60%;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
+
+  .authenticationEmailInput {
+    padding: 15px 10px;
+    font-size: 21px;
   }
-  
-  .authenticationInputs {
-      @include flexer;
-    height: 60%;
-    width: 50%;
-    flex-direction: column;
-    justify-content: flex-start;
-    justify-content: space-around;
-    padding-bottom: 30px;
-    margin-top: -20px;
+
+  .authenticationPasswordInput {
+    padding: 15px 10px;
+    font-size: 21px;
   }
-  
-  .authenticationButtons {
-      @include flexer;
-    height: auto;
-    width: 70%;
-    flex-direction: row;
-    justify-content: space-evenly;
+
+  .authButtons {
+    padding: 10px;
+    font-size: 21px;
   }
-  
-  .authenticationLogo {
-    margin-top: 20px;
-    filter: invert(1);
-  }
-  
+
   .welcome {
-    padding-top: 20px;
-    font-size: 30px;
+    font-size: 40px;
   }
-  
-  @media (max-width: 1025px) {
-    .authenticationLoginBox{
-      width: 65vw;
-      height: 55vh;
-      margin-bottom: 40px;
-    }
-  
-    .authenticationEmailInput{
-      padding:15px 10px;
-      font-size: 21px;
-    }
-  
-    .authenticationPasswordInput{
-      padding:15px 10px;
-      font-size: 21px;
-    }
-  
-    .authButtons{
-      padding:10px;
-      font-size: 21px;
-  
-    }
-  
-    .welcome{
-      font-size: 40px;
-    }
-  
-    .authenticationLogo{
-      height: 17%;
-    }
-  
-    
+
+  .authenticationLogo {
+    height: 17%;
   }
-  
-  @media (max-width: 500px) {
-    .authenticationLoginBox{
-      width: 100vw;
-      height: 80vh;
-      margin-bottom: 40px;
-    }
-  
-    .authenticationEmailInput{
-      padding:13px 8px;
-      font-size: 18px;
-    }
-  
-    .authenticationPasswordInput{
-      padding:13px 8px;
-      font-size: 18px;
-    }
-  
-    .authButtons{
-      padding:8px;
-      font-size: 18px;
-  
-    }
-  
-    .welcome{
-      font-size: 40px;
-    }
-  
-    .authenticationLogo{
-      height: 15%;
-    }
+}
+
+@media (max-width: 500px) {
+  .authenticationLoginBox {
+    width: 100vw;
+    height: 80vh;
+    margin-bottom: 40px;
   }
-  
+
+  .authenticationEmailInput {
+    padding: 13px 8px;
+    font-size: 18px;
+  }
+
+  .authenticationPasswordInput {
+    padding: 13px 8px;
+    font-size: 18px;
+  }
+
+  .authButtons {
+    padding: 8px;
+    font-size: 18px;
+  }
+
+  .welcome {
+    font-size: 40px;
+  }
+
+  .authenticationLogo {
+    height: 15%;
+  }
+}

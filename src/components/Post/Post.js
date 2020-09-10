@@ -22,20 +22,26 @@ function Post(props) {
       <div className="updateAndPost">
         <div className="titleAndButtons">
           <div className="profileInfoTwo">
-        <img
-            alt="profilePic"
-            className="profilePicTwo"
-            src={props.posts.profilepic}
-          />
-          <div className="profileNamesTwo">
-          <p className="profileFirstNameTwo">{props.posts.firstname}</p>
-          {/* <br /> */}
-          <p className="profileLastNameTwo">{props.posts.lastname}</p>
-          </div>
+            <img
+              alt="profilePic"
+              className="profilePicTwo"
+              src={props.posts.profilepic}
+            />
+            <div className="profileNamesTwo">
+              <p className="profileFirstNameTwo">{props.posts.firstname}</p>
+              {/* <br /> */}
+              <p className="profileLastNameTwo">{props.posts.lastname}</p>
+            </div>
           </div>
           <div className="postTitle">{props.posts.title}</div>
           <div className="postButtons">
-            <h5 className="editAndX" onClick={() => props.history.push(`/Edit/${props.posts.id}`)} > EDIT </h5>
+            <h5
+              className="editAndX"
+              onClick={() => props.history.push(`/Edit/${props.posts.id}`)}
+            >
+              {" "}
+              EDIT{" "}
+            </h5>
             <h5 onClick={() => props.dlt(props.posts.id)} className="editAndX">
               {" "}
               X{" "}

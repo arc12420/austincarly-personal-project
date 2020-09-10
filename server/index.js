@@ -6,7 +6,13 @@ const controller = require("./controller");
 const app = express();
 const nodemailer = require("nodemailer");
 
-const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET, SERVER_EMAIL, SERVER_PASSWORD } = process.env;
+const {
+  CONNECTION_STRING,
+  SERVER_PORT,
+  SESSION_SECRET,
+  SERVER_EMAIL,
+  SERVER_PASSWORD,
+} = process.env;
 
 app.use(express.json());
 
@@ -14,9 +20,9 @@ const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: SERVER_EMAIL,
-    pass: SERVER_PASSWORD
-  }
-})
+    pass: SERVER_PASSWORD,
+  },
+});
 
 app.use(
   session({
@@ -32,11 +38,9 @@ massive({
   ssl: { rejectUnauthorized: false },
 }).then((db) => {
   app.set("db", db);
-  app.set("transporter", transporter)
+  app.set("transporter", transporter);
   console.log(`Database is connected.`);
 });
-
-
 
 app.get("/api/users", controller.getAllUsers);
 app.get("/api/posts", controller.getAllPosts);

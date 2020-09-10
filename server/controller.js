@@ -161,16 +161,15 @@ module.exports = {
       from: "howsyourbrood@gmail.com",
       to: email,
       subject: `Welcome ${firstName} ${lastName}`,
-      text: `Welcome ${firstName} ${lastName}! We are so happy you have joined us today!`
-
-    }
+      text: `Welcome ${firstName} ${lastName}! We are so happy you have joined us today!`,
+    };
     transporter.sendMail(mailOptions, (err, data) => {
-      if (err){
-        console.log(err)
+      if (err) {
+        console.log(err);
       } else {
-        console.log("Email sent successfully!")
+        console.log("Email sent successfully!");
       }
-    })
+    });
 
     console.log(newUser);
     req.session.user = {

@@ -89,8 +89,14 @@ class Registration extends Component {
               />
             </div>
             <div className="registrationButtons">
-              <button className="regButtons" onClick={this.register}> Sign-up </button>
-              <button className="regButtons" onClick={() => this.props.history.push("/")}>
+              <button className="regButtons" onClick={this.register}>
+                {" "}
+                Sign-up{" "}
+              </button>
+              <button
+                className="regButtons"
+                onClick={() => this.props.history.push("/")}
+              >
                 {" "}
                 Cancel{" "}
               </button>

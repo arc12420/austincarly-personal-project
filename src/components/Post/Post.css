@@ -90,8 +90,8 @@
   max-width: 250px;
   min-height: 250px;
   margin-right: 20px;
-  opacity: 1;
   object-fit: contain;
+  opacity: 1500%;
 }
 
 .profilePic {

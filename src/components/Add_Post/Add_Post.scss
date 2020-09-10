@@ -6,165 +6,161 @@ $commonJustify: center;
 $commonBackGroundColor: #181a1b;
 $commonFontColor: #dad7d2;
 
-@mixin boxSetup1{
-    opacity: .95;
-    border-radius: 4px;
-    -webkit-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
-    -moz-box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
-    box-shadow: 0px 9px 14px 5px rgba(0,0,0,0.79);
+@mixin boxSetup1 {
+  opacity: 0.95;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
+  -moz-box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
+  box-shadow: 0px 9px 14px 5px rgba(0, 0, 0, 0.79);
 }
-@mixin boxSetup2{
-    opacity: .95;
-    border-radius: 4px;
-    -webkit-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
-    -moz-box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
-    box-shadow: -12px 14px 11px 1px rgba(0,0,0,0.79);
-}
-
-@mixin flexer{
-    display: $commonDisplay;
-    justify-content: $commonJustify;
+@mixin boxSetup2 {
+  opacity: 0.95;
+  border-radius: 4px;
+  -webkit-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
+  -moz-box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
+  box-shadow: -12px 14px 11px 1px rgba(0, 0, 0, 0.79);
 }
 
-@mixin fullscreen{
-    height: $commonHeight;
-    width: $commonWidth;    
+@mixin flexer {
+  display: $commonDisplay;
+  justify-content: $commonJustify;
 }
 
-@mixin colors{
-    background-color: $commonBackGroundColor;
-    color: $commonFontColor;
+@mixin fullscreen {
+  height: $commonHeight;
+  width: $commonWidth;
+}
+
+@mixin colors {
+  background-color: $commonBackGroundColor;
+  color: $commonFontColor;
 }
 
 .addPostComponent {
-    @include fullscreen;
-    @include flexer;
-    align-items: flex-start;
-    padding-top: 60px;
-  }
-  
-  .addPostBox {
-      @include colors;
-      @include boxSetup2;
-      @include flexer;
-    margin-bottom: 0px;
-    height: 65%;
-    width: 75%;    
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 40px;
-  }
-  
-  .postInputContainer {
-    height: auto;
-    width: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    word-wrap: break-word;
-    word-break: break-all;
-  }
-  
-  .postInputBox {
-    height: 450%;
-    width: 80%;
-    background-color: #24272a;
-    opacity: 100;
-    color: #dad7d2;
-    font-size: 20px;
-  }
-  
-  .addPostButtons {
-      @include flexer;
-    width: 200px;
-    justify-content: space-evenly;
-    margin-top: 20px;
-  }
-  
+  @include fullscreen;
+  @include flexer;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+.addPostBox {
+  @include colors;
+  @include boxSetup2;
+  @include flexer;
+  margin-bottom: 0px;
+  height: 65%;
+  width: 75%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px;
+}
+
+.postInputContainer {
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.postInputBox {
+  height: 450%;
+  width: 80%;
+  background-color: #24272a;
+  opacity: 100;
+  color: #dad7d2;
+  font-size: 20px;
+}
+
+.addPostButtons {
+  @include flexer;
+  width: 200px;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.titleImagePageTitles {
+  @include flexer;
+  width: 80%;
+  height: 45%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.addPostPageTitleBox {
+  height: 80px;
+  width: 63%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.addPostPageTitle {
+  height: 50px;
+  width: 300px;
+  font-size: 40px;
+}
+
+.addPostInputs {
+  height: 266px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 1025px) {
   .titleImagePageTitles {
-      @include flexer;
-    width: 80%;
-    height: 45%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .addPostPageTitleBox {
-    height: 80px;
-    width: 63%;
-    display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    flex-direction: column-reverse;
   }
-  
+
   .addPostPageTitle {
-    height: 50px;
-    width: 300px;
-    font-size: 40px;
+    width: auto;
   }
-  
+
+  .addPostPageTitleBox {
+    width: auto;
+  }
+
   .addPostInputs {
-    height: 266px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 50px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    justify-content: space-evenly;
+    margin: 0px;
+    width: auto;
   }
-  
-  @media (max-width:1025px) {
-    .titleImagePageTitles{
-      justify-content: center;
-      align-items: center;
-      flex-direction: column-reverse;
-    }
-  
-    .addPostPageTitle{
-      width:auto;
-    }
-  
-    .addPostPageTitleBox{
-      width: auto;
-    }
-  
-    .addPostInputs{
-      margin:0px;
-      width: auto;
-    }
-  
-    .AddPButtons{
-      padding: 10px;
-      font-size: 21px;
-      width: 100px;
-    }
-    
-    .addPostButtons{
-      width:75%;
-    }
-  
-    .postInput{
-      padding: 15px 10px;
-      font-size: 30px;
-      height: 10px;
-      width: 100%;
-    }
-  
-    .postInputBox{
-      font-size: 30px;
-    }
-  
+
+  .AddPButtons {
+    padding: 10px;
+    font-size: 21px;
+    width: 100px;
   }
-  
-  @media (max-width:500px) {
-    .addPostBox{
-      width:100vw;
-      height:67%;
-    }
-  
+
+  .addPostButtons {
+    width: 75%;
   }
-  
-  
+
+  .postInput {
+    padding: 15px 10px;
+    font-size: 30px;
+    height: 10px;
+    width: 100%;
+  }
+
+  .postInputBox {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .addPostBox {
+    width: 100vw;
+    height: 67%;
+  }
+}
