@@ -134,6 +134,10 @@
     width: 100vw;
     height: 67%;
   }
+
+  .postInputBox {
+    height: 50%;
+  }
 }
 
 /*# sourceMappingURL=Add_Post.css.map */
